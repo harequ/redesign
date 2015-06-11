@@ -1,9 +1,10 @@
 header #nav {
 	@include clearfix;
-	position: relative;
-	z-index: 1;
+	// position: relative;
+	z-index: 10;
 	background: $milky;
 	width: 100%;
+	opacity: 0.96;
 	#pull {
 		display: none;
 		color: $white;
@@ -14,7 +15,7 @@ header #nav {
 		text-transform: uppercase;
 		text-align: center;
 
-		@include breakpoint (max-width $small) {
+		@include breakpoint (max-width 700px) {
 			display: block;
 			width: 100%;
 			position: relative;
@@ -33,7 +34,7 @@ header #nav {
 		}
 	}
 	.navbar {
-		@include breakpoint (max-width $small) {
+		@include breakpoint (max-width 700px) {
 			display: none;
 		}
 		@include container;
@@ -52,9 +53,6 @@ header #nav {
 			li {
 				float: left;
 				height: 42px;
-				@include breakpoint (max-width $medium) {
-					height: 38px;
-				}
 				@include breakpoint (max-width $small) {
 					float: none;
 					border-top: 1px solid lighten($milky, 3);
@@ -81,7 +79,6 @@ header #nav {
 	  				@include transition-duration(.3s);
 	  				@include breakpoint (max-width $medium) {
 						font-size: 1.2em;
-						padding: 10px 10px;
 					}
 					&:hover {
 						border-top: 3px solid $pinky;

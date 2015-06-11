@@ -1,10 +1,58 @@
 #work {
+	article {
+		@include container(800px);
+	}
+
+	.project {
+		@include clearfix;
+		@include display-flex();
+    	@include align-items(center);
+    	@include justify-content(center);
+    	padding: 30px 0;
+    	border-top: 1px solid lighten($grey, 58);
+    	border-bottom: 1px solid lighten($grey, 50);
+    	&:first-child {
+    		border-top: none;
+    		padding-top: 0;
+    	}
+    	&:last-child {
+    		border-bottom: none;
+    		padding-bottom: 0;
+    	}
+	}
+
 	.project img {
 		@include span(7);
-		margin-right: span(1);
+		background: lighten($grey, 30);
+		@include border-radius(4px);
+		padding-top: 30px;
+		padding-left: 0;
+		padding-right: 0;
+		// margin-right: span(1);
 	}
 
 	.project div {
-		@include span(4);
+		@include span(5);
+		padding-left: 30px;
+	}
+
+	.project div span {
+		color: $pinky;
+	}
+
+	.project h3 {
+		line-height: 1;
+		padding-bottom: 20px;
+	}
+
+	.project button {
+		padding: 10px 40px;
+		border: none;
+		background: $pinky;
+		color: $white;
+		@include border-radius(3px);
+		margin-top: 20px;
+		cursor: pointer;
+		outline: none;
 	}
 }
