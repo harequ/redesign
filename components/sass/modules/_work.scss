@@ -1,0 +1,10 @@
+#work {
+	.project img {
+		@include span(7);
+		margin-right: span(1);
+	}
+
+	.project div {
+		@include span(4);
+	}
+}

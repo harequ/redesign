@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
@@ -12,56 +12,95 @@
 <body>
 	<header id="intro">
 		<section class="fullheight">
-			<h1>Constantine Suvorin - Web Designer &amp; Frontend Developer</h1>
-			<p>I design things</p>
-			<p>Hello, my name is Constantine and at this moment I'm a freelancer.<br>
-			I just love making different kind of illustrations, logos, creating layouts and developing projects.<br>
-			Welcome to my website and thanks for stopping by!</p>
+			<div class="snow"></div>
+			<div class="hero">
+				<div class="logo">
+					<h1>Constantine Suvorin - Web Designer &amp; Frontend Developer</h1>
+				</div>
+				<div class="hero-text">
+					<p>Hello, my name is Constantine.</p>
+					<p>I just love making different kind of illustrations, logos, creating layouts<br> and developing projects. I mostly focused on front-end development but also can do some PHP.</p>
+					<p>Welcome to my website and thanks for stopping by!</p>
+				</div>
+			</div>
+			<dl>
+				<div>
+					<dt>Website<br> Design</dt>
+					<dd>I create a future website’s design in Photoshop and Illustrator first...</dd>
+				</div>
+				<div>
+					<dt>Front-end<br> development</dt>
+					<dd>...then I do html/css in my favorite Sublime Text editor...</dd>
+				</div>
+				<div>
+					<dt>Back-end<br> development</dt>
+					<dd>...and finally I finish up by creating a CMS in Laravel PHP framework.</dd>
+				</div>
+			</dl>
+			<div class="branches"></div>
+			<p class="arrow"><a href="#work"></a></p>
 		</section>
+		<nav id="nav">
+			<a href="#" id="pull">Menu</a>
+			<div class="navbar">
+				<ul>
+					<li><a href="#work">Featured work</a></li>
+					<li><a href="#design">Graphic Design</a></li>
+					<li><a href="#skills">Skills I have</a></li>
+					<li><a href="#contact">Get in touch</a></li>
+				</ul>
+			</div>
+		</nav>
 	</header>
-	<nav id="nav">
-		<div class="navbar">
-			<div class="brand"><a href="#welcome">Constantine Suvorin - Web Designer &amp; Frontend Developer</a></div>
-			<ul>
-				<li><a href="#work">Featured work</a></li>
-				<li><a href="#design">Graphic Design</a></li>
-				<li><a href="#skills">Skills I have</a></li>
-				<li><a href="#contact">Get in touch</a></li>
-			</ul>
-		</div>
-	</nav>
-	<main>
+	<main id="wrapper">
 		<section class="scene" id="work">
+			<div class="line"><h2><span>Featured work</span></h2></div>
 			<article>
-				<h2>Featured work</h2>
 				<div class="project">
-					<img src="" alt="Group of companies VEK">
-					<h3>Design for "Group of companies VEK"</h3>
-					<p>The company is focused on cottage design, manufacture and construction. They provide like pre-designed standart types of houses, also as individual projects elaborated by the architect's bureau.</p>
-					<button>View Project</button>
+					<img src="images/work-vek.jpg" alt="Group of companies VEK">
+					<div>
+						<h3><span>//</span> Group of companies “VEK”</h3>
+						<p>The company is focused on cottage design, manufacture and construction. They provide like pre-designed standart types of houses, also as individual projects elaborated by the architect's bureau.</p>
+						<button>View Project</button>
+					</div>
 				</div>
 				<hr>
 				<div class="project">
-					<img src="" alt="RILEKS company">
-					<h3>Website for RILEKS company</h3>
-					<p>Rileks is a small company located in Tambov. They sell charcoal in bags, firewood, lighter fluid and some other related things for BBQ.</p>
-					<button>View Project</button>
+					<img src="images/work-rileks.jpg" alt="RILEKS company">
+					<div>
+						<h3><span>//<span> RILEKS company website</h3>
+						<p>Rileks is a small company located in Tambov. They sell charcoal in bags, firewood, lighter fluid and some other related things for BBQ.</p>
+						<button>View Project</button>
+					</div>
 				</div>
 				<hr>
 				<div class="project">
-					<img src="" alt="My old website portfolio design">
-					<h3>My old website portfolio design</h3>
-					<p>Previous design for my portfolio website. The layout of the website was adaptive for better user experience on different devices.</p>
-					<button>View Project</button>
+					<img src="images/work-old-portfolio.png" alt="My old website portfolio design">
+					<div>
+						<h3><span>//</span> My old website portfolio design</h3>
+						<p>Previous design for my portfolio website. The layout of the website was adaptive for better user experience on different devices.</p>
+						<button>View Project</button>
+					</div>
 				</div>
 			</article>
 		</section>
 		<section class="scene" id="design">
+			<div class="line"><h2><span>Graphic Design</span></h2></div>
 			<article>
-				<h2>Graphic Design</h2>
 				<div id="illustrations">
 					<h3>illustrations</h3>
 					<div id="gallery">
+						<img src="" alt="Orc">
+						<img src="" alt="Violet suitcase">
+						<img src="" alt="Pear">
+						<img src="" alt="Cow in the dark">
+						<img src="" alt="A guy">
+						<img src="" alt="Kitty">
+					</div>
+				</div>
+				<div id="logos">
+					<h3>logos</h3>
+					<div class="carousel">
 						<img src="" alt="RILEKS logo">
 						<img src="" alt="ТМ Угольная страна logo">
 						<img src="" alt="Constanta Media logo">
@@ -69,20 +108,11 @@
 						<img src="" alt="GK-VEK logo">
 					</div>
 				</div>
-				<div id="logos">
-					<h3>logos</h3>
-					<div class="carousel">
-						<div><img src="" alt=""></div>
-						<div><img src="" alt=""></div>
-						<div><img src="" alt=""></div>
-						<div><img src="" alt=""></div>
-					</div>
-				</div>
 			</article>
 		</section>
 		<section class="scene" id="skills">
+			<div class="line"><h2><span>I know a little about a lot</span></h2></div>
 			<article>
-				<h2>I know a little about a lot</h2>
 				<div id="skills">
 					<h3>Skills I have</h3>
 					<ul>
@@ -114,7 +144,7 @@
 	</main>
 	<footer>
 		<section class="scene" id="contact">
-			<h2>Get in Touch</h2>
+			<!-- <h2>Get in Touch</h2> -->
 			<a href="#">harequ@gmail.com</a>
 			<ul id="socialmedia">
 				<li><a href="#"><img src="" alt="FL"></a></li>

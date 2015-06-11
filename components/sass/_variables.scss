@@ -1,11 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Exo+2:400,200,600,800);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,100,400|Open+Sans:300italic,400,600italic,800|Courgette);
 
 @include border-box-sizing; //uses border box sizing like the old IE
 
 $susy: (
 	columns: 12,
-	container: 60em,
-	gutters: 1/4,
+	container: 1000px,
+	gutters: 1/5,
 	gutter-position: inside
 );
 
@@ -14,32 +14,9 @@ $small: 650px;
 $medium: 960px;
 $wide: 1200px;
 
-//Add Color Palette
-$blue: 		#063642;
-$green: 	#45B29D;
-$yellow: 	#EFC94C;
-$orange: 	#E27A3F;
-$red: 		#DF4848;
-$pink: 		#CD0069;
-$purple: 	#6C71C4;
-$dark: 		#000000;
-$light: 	#FFFFFF;
-
-$backgroundColor: 	$light;
-$typeDefault: 		$dark;
-$navBackground: 	$blue;
-$navForeground: 	$light;
-$navHover: 			$yellow;
-$navBrandBg: 		$red;
-$headersubbg: 		$dark;
-
-//Font variables
-$fontfamily: 'Exo 2', "Helvetica Neue", Helvetica, Arial, sans-serif;
-$thin: 200;
-$normal: 400;
-$bold: 600;
-$heavy: 800;
-
-$headFont: $thin 1.5em/1.5em $fontfamily;
-$mainFont: $thin 1em/1.5em $fontfamily;
-$headColor: lighten($blue, 20);
+//Color Palette
+$white: #f0f0f0;
+$milky: #b1c0b1;
+$violet: #393b46;
+$grey: #666666;
+$pinky: #f6846a;
