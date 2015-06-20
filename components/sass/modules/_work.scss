@@ -1,48 +1,75 @@
 #work {
-	article {
-		@include container(800px);
-	}
 
-	.project {
-		@include clearfix;
-		@include display-flex();
-    	@include align-items(center);
-    	@include justify-content(center);
-    	padding: 30px 0;
-    	border-top: 1px solid lighten($grey, 58);
+	background: url("../images/noisy-bg.gif");
+	.project-wrap {
+		width: 100%;
+		transition: all 200ms;
+		border-top: 1px solid lighten($grey, 58);
     	border-bottom: 1px solid lighten($grey, 50);
+    	&:hover {
+			background: lighten($violet, 10);
+			h3 {
+				color: $white;
+			}
+    	}
     	&:first-child {
     		border-top: none;
-    		padding-top: 0;
     	}
     	&:last-child {
     		border-bottom: none;
-    		padding-bottom: 0;
     	}
+	}
+
+	.project {
+		@include container(730px);
+		@include breakpoint(750px) {
+			@include display-flex();
+	    	@include align-items(center);
+	    	@include justify-content(center);
+		}
+    	padding: 40px 20px;
 	}
 
 	.project img {
 		@include span(7);
-		background: lighten($grey, 30);
-		@include border-radius(4px);
+		@include border-radius(15px);
+		border: 1px solid lighten($grey, 50);
 		padding-top: 30px;
 		padding-left: 0;
 		padding-right: 0;
-		// margin-right: span(1);
+		background: lighten($grey, 52);
+		background-image: url('../images/browser-circles.png');
+		background-repeat: no-repeat;
+		background-position: 10px 10px;
+
+		@include breakpoint(0 750px) {
+			@include full;
+			max-width: 410px;
+			padding-left: 0;
+			padding-right: 0;
+			display: block;
+			margin: 0 auto;
+			float: none;
+		}
 	}
 
 	.project div {
-		@include span(5);
-		padding-left: 30px;
-	}
+		@include span(5 last);
+		@include prefix(30px);
 
-	.project div span {
-		color: $pinky;
+		@include breakpoint(0 749px) {
+			@include break;
+			@include full;
+			@include prefix(0);
+			text-align: center;
+			margin-top: 20px;
+		}
 	}
 
 	.project h3 {
 		line-height: 1;
-		padding-bottom: 20px;
+		padding-bottom: 15px;
+
 	}
 
 	.project button {
@@ -54,5 +81,10 @@
 		margin-top: 20px;
 		cursor: pointer;
 		outline: none;
+
+		@include breakpoint(0 749px) {
+			width: 50%;
+			padding: 10px 20px;
+		}
 	}
 }

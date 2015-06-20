@@ -5,6 +5,7 @@ header #nav {
 	background: $milky;
 	width: 100%;
 	opacity: 0.96;
+	overflow: hidden;
 	#pull {
 		display: none;
 		color: $white;
@@ -14,13 +15,13 @@ header #nav {
 		text-decoration: none;
 		text-transform: uppercase;
 		text-align: center;
+		height: 45px;
 
 		@include breakpoint (max-width 700px) {
 			display: block;
 			width: 100%;
 			position: relative;
 			padding: 10px 0;
-			border-bottom: 3px solid darken($milky, 3);
 		}
 		&:after {
 			content: "";
@@ -34,7 +35,7 @@ header #nav {
 		}
 	}
 	.navbar {
-		@include breakpoint (max-width 700px) {
+		@include breakpoint (max-width $small) {
 			display: none;
 		}
 		@include container;
@@ -52,8 +53,8 @@ header #nav {
 
 			li {
 				float: left;
-				height: 42px;
-				@include breakpoint (max-width $small) {
+				height: 40px;
+				@include breakpoint (max-width 700px) {
 					float: none;
 					border-top: 1px solid lighten($milky, 3);
 					border-bottom: 1px solid darken($milky, 3);
@@ -75,23 +76,24 @@ header #nav {
 					border-right: 1px solid darken($milky, 7);
 					border-left: 1px solid lighten($milky, 7);
 					padding: 12px 20px;
-					@include transition-property(border-top, background-color);
-	  				@include transition-duration(.3s);
+					
 	  				@include breakpoint (max-width $medium) {
 						font-size: 1.2em;
 					}
-					&:hover {
-						border-top: 3px solid $pinky;
-						@include breakpoint (max-width $small) {
-							border-top: 0;
-							background-color: lighten($milky, 3);
-						}
-					}
+					
 					@include breakpoint (max-width $small) {
 						border-left: none;
 						border-right: none;
 						padding: 6px;
 						width: 100%;
+					}
+				} //a
+				transition: all 200ms;
+				&:hover {
+					border-top: 3px solid $pinky;
+					@include breakpoint (max-width $small) {
+						border-top: 1px solid lighten($milky, 3);
+						background-color: lighten($milky, 3);
 					}
 				}
 			} //li

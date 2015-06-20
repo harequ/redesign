@@ -1,0 +1,66 @@
+#design {
+
+	padding-left: 10px;
+	padding-right: 10px;
+	
+	@include breakpoint($small) {
+		background: url('../images/triangular-bg.png');
+	}
+
+	h3 {
+		display: inline-block;
+		padding-bottom: 20px;
+		font-size: 1.3em;
+		text-align: center;
+		margin-bottom: 30px;
+		position: relative;
+	}
+
+	h3:before {
+	  content : "";
+	  position: absolute;
+	  left    : 25%;
+	  bottom  : 0;
+	  height  : 1px;
+	  width   : 50%;
+	  border-bottom: 1px solid lighten($grey, 50);
+	}
+
+	#illustrations, #logos {
+		@include container;
+		text-align: center;
+		margin-top: 30px;
+
+		@include breakpoint(max-width $small) {
+			margin-top: 10px;
+		}
+	}
+
+	#logos {
+		@include breakpoint(max-width $small) {
+			margin-top: 30px;
+		}
+	}
+
+	#gallery img {
+		@include gallery(4 of 12);
+		@include gutters(after);
+		margin-bottom: gutter(12);
+		border: 10px solid white;
+		@include box-shadow(0 0 3px lighten($grey, 40));
+
+		@include breakpoint(max-width $small) {
+			@include gallery(6 of 12);
+		}
+
+		@include breakpoint(max-width $narrow) {
+			@include gallery(11 of 12);
+			@include full;
+			@include break;
+		}
+	}
+
+	.line {
+		margin: 0;
+	}
+}

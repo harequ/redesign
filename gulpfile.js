@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
     minifyHTML = require('gulp-minify-html'),
-    browserify = require('gulp-browserify'),
+    // browserify = require('gulp-browserify'),
     concat = require('gulp-concat');
 
 /* Variables
@@ -37,7 +37,7 @@ sassSources = ['components/sass/style.scss'];
 gulp.task('js', function() {
   gulp.src(jsSources)
     .pipe(concat('script.js'))
-    .pipe(browserify())
+    // .pipe(browserify())
     .on('error', gutil.log)
     .pipe(gulpif(env === 'production', uglify()))
     .pipe(gulp.dest(outputDir + 'js'))

@@ -1,7 +1,20 @@
-var $ = require('jquery');
-
 $(function() {
+	
+	/*
+	=============================================
+	=== IE Fix for "jumpy" fixed bacground
+	=============================================
+	*/
+	if(navigator.userAgent.match(/Trident\/7\./)) {
+        $('body').on("mousewheel", function () {
 
+            event.preventDefault();
+            var wheelDelta = event.wheelDelta;
+
+            var currentScrollPosition = window.pageYOffset;
+            window.scrollTo(0, currentScrollPosition - wheelDelta);
+        });
+	}
 	/*
 	=============================================
 	=== Intro page
@@ -10,37 +23,42 @@ $(function() {
 
 	var fadeStart = 0, // 100px scroll or less will equiv to 1 opacity
 		fadeUntil = 400, // 400px scroll or more will equiv to 0 opacity
-		appearStart = 800, // 400px scroll or more will equiv to 0 opacity
+		appearStart = 400, // 400px scroll or more will equiv to 0 opacity
 		hero = $('.hero'),
 		branches = $('.branches'),
 		snow = $('.snow'),
 		threeCircles = $('#intro dl'),
-		heightOfIntro = $('header').height(),
 		nav = $('#nav'),
-		navOffset = $('#nav').offset().top;
-
+		navOffset = $('#nav').offset().top,
+		navHeight = nav.outerHeight();
 		nav.wrap('<div class="nav-placeholder"></div>');
-		$('.nav-placeholder').height(nav.outerHeight());
-		
+	
+	/*
+	=============================================
+	=== Smooth scrolling
+	=============================================
+	*/
+
+	$(".scroll").click(function(event) {
+	    event.preventDefault();
+	    $('html, body').animate({ scrollTop : $(this.hash).offset().top - navHeight } , 700);
+    });
 
 	$(window).scroll(function() {
-
 		var offset = $(this).scrollTop();
+		var heightOfIntro = $('header').height();
 
 		if(offset >= navOffset) {
 			nav.addClass('fixed');
+			$('.nav-placeholder').css('height', navHeight);
 		} else {
 			nav.removeClass('fixed');
+			$('.nav-placeholder').css('height', '');
 		}
 
 		if(offset <= heightOfIntro) {
-			branches.css({
-				'transform' : 'translate(0px, '+ offset / 3.8 +'%)'
-			});
-
-			snow.css({
-				'transform' : 'translate(0px, '+ offset / 400 +'%)'
-			});
+			branches.css({ 'transform' : 'translate(0px, '+ offset / 3.8 +'%)' });
+			snow.css({ 'transform' : 'translate(0px, ' + offset * 1.2 +'px)' });
 		}
 
 	    var opacity = 0;
@@ -56,7 +74,6 @@ $(function() {
 
 
 	    hero.css('opacity', opacity);
-
 	    threeCircles.css('opacity', opacity2);
 	});
 
