@@ -2,7 +2,7 @@ $(function() {
 	
 	/*
 	=============================================
-	=== IE Fix for "jumpy" fixed bacground
+	=== IE Fix for "jumpy" fixed background
 	=============================================
 	*/
 	if(navigator.userAgent.match(/Trident\/7\./)) {
@@ -32,12 +32,6 @@ $(function() {
 		navOffset = $('#nav').offset().top,
 		navHeight = nav.outerHeight();
 		nav.wrap('<div class="nav-placeholder"></div>');
-	
-	/*
-	=============================================
-	=== Smooth scrolling
-	=============================================
-	*/
 
 	$(".scroll").click(function(event) {
 	    event.preventDefault();
@@ -79,7 +73,7 @@ $(function() {
 
 	/*
 	=============================================
-	=== Navigation menu
+	=== Sticky navigation menu
 	=============================================
 	*/
 
@@ -110,5 +104,17 @@ $(function() {
 		} else if (width < 650 && menu.not(':hidden')) {
 			menu.attr('style', ':hidden');
 		}
+	});
+
+	/*
+	=============================================
+	=== Carousel
+	=============================================
+	*/
+
+	$('.carousel').slick({
+		dots: true,
+		autoplay: true,
+  		autoplaySpeed: 5000
 	});
 });

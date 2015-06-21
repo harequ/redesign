@@ -37,6 +37,8 @@
 	}
 
 	#logos {
+		@include clearfix;
+		
 		@include breakpoint(max-width $small) {
 			margin-top: 30px;
 		}

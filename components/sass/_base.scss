@@ -103,7 +103,7 @@ p {
 .scene {
 	padding-top: 30px;
 
-	@include breakpoint(max-width $small) {
-		padding-top: 30px;
-	}
+	// @include breakpoint(max-width $small) {
+	// 	padding-top: 20px;
+	// }
 }
