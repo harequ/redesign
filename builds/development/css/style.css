@@ -89,14 +89,25 @@ h2 {
   border-top: 2px solid #8c8c8c;
   border-bottom: 2px solid #8c8c8c;
   display: inline-block;
-  margin: 20px 0;
   text-align: center;
 }
 @media (max-width: 700px) {
   h2 {
-    margin: 10px 0 20px;
-    font-size: 2em;
+    font-size: 2.2em;
     line-height: 45px;
+  }
+}
+@media (max-width: 470px) {
+  h2 {
+    font-size: 1.7em;
+  }
+}
+@media (max-width: 370px) {
+  h2 {
+    margin: 10px 0 5px;
+    font-size: 1.4em;
+    line-height: 40px;
+    display: block;
   }
 }
 
@@ -117,6 +128,12 @@ section h2 span:after {
   border-bottom: 2px solid #8c8c8c;
   width: 1000%;
   top: 50%;
+}
+@media (max-width: 370px) {
+  section h2 span:before,
+  section h2 span:after {
+    border: none;
+  }
 }
 
 section h2 span:before {
@@ -147,11 +164,11 @@ p {
 
 *::-moz-selection {
   color: #f0f0f0;
-  background-color: #f6846a;
+  background-color: #45FA7B;
 }
 *::selection {
   color: #f0f0f0;
-  background-color: #f6846a;
+  background-color: #45FA7B;
 }
 
 .fullheight {
@@ -173,7 +190,7 @@ p {
 }
 
 .scene {
-  padding-top: 30px;
+  padding-top: 40px;
 }
 
 header #nav {
@@ -481,7 +498,7 @@ header #nav .navbar ul li:hover {
   background: #505362;
 }
 #work .project-wrap:hover h3 {
-  color: #f0f0f0;
+  color: #cacaca;
 }
 #work .project-wrap:first-child {
   border-top: none;
@@ -490,10 +507,10 @@ header #nav .navbar ul li:hover {
   border-bottom: none;
 }
 #work .project {
+  padding: 40px 20px;
   max-width: 730px;
   margin-left: auto;
   margin-right: auto;
-  padding: 40px 20px;
 }
 #work .project:after {
   content: " ";
@@ -509,6 +526,9 @@ header #nav .navbar ul li:hover {
     -webkit-justify-content: center;
     justify-content: center;
   }
+}
+#work h2 {
+  margin-bottom: 10px;
 }
 #work .project img {
   width: 57.74648%;
@@ -594,11 +614,16 @@ header #nav .navbar ul li:hover {
 }
 #design h3 {
   display: inline-block;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   font-size: 1.3em;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   position: relative;
+}
+@media (max-width: 370px) {
+  #design h3 {
+    font-size: 1em;
+  }
 }
 #design h3:before {
   content: "";
@@ -620,11 +645,6 @@ header #nav .navbar ul li:hover {
   content: " ";
   display: block;
   clear: both;
-}
-@media (max-width: 700px) {
-  #design #illustrations, #design #logos {
-    margin-top: 10px;
-  }
 }
 #design #logos {
   overflow: hidden;
@@ -700,6 +720,209 @@ header #nav .navbar ul li:hover {
   margin: 0;
 }
 
+#skills {
+  background: #393b46;
+  overflow: hidden;
+  *zoom: 1;
+}
+@media (min-width: 700px) {
+  #skills {
+    background: url("../images/triangular-bg.png") #393b46;
+  }
+}
+#skills article {
+  padding: 0 10px;
+}
+#skills img {
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+#skills article {
+  margin-bottom: 30px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#skills article:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+#skills article img {
+  width: 40.84507%;
+  float: left;
+  margin-right: 1.40845%;
+}
+@media (max-width: 750px) {
+  #skills article img {
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 562px;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+}
+#skills article .skillz {
+  width: 32.39437%;
+  float: left;
+  margin-right: 1.40845%;
+}
+@media (max-width: 750px) {
+  #skills article .skillz {
+    width: 66.19718%;
+    float: left;
+    margin-right: 1.40845%;
+  }
+}
+@media (max-width: 550px) {
+  #skills article .skillz {
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+#skills article .toolz {
+  width: 23.94366%;
+  float: right;
+  margin-right: 0;
+  padding-left: 20px;
+}
+@media (max-width: 750px) {
+  #skills article .toolz {
+    width: 32.39437%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (max-width: 550px) {
+  #skills article .toolz {
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0%;
+  }
+}
+#skills article .skillz, #skills article .toolz {
+  margin-top: 4%;
+}
+#skills article h3 {
+  margin-bottom: 20px;
+  color: #bfbfbf;
+  font-size: 1.5em;
+}
+@media (max-width: 550px) {
+  #skills article h3 {
+    margin-bottom: 10px;
+  }
+}
+#skills dt {
+  float: left;
+  padding: 2px;
+  color: #f0f0f0;
+  font-size: 0.8em;
+}
+#skills dd {
+  background: #32343e;
+  border-radius: 2px;
+}
+#skills .bar {
+  margin-bottom: 10px;
+  color: #f0f0f0;
+  padding: 4px;
+  text-align: center;
+  background-color: #505362;
+  border-radius: 2px;
+  height: 28px;
+  -webkit-animation-name: bar;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
+}
+#skills #html {
+  -webkit-animation-name: html;
+  animation-name: html;
+}
+#skills #css {
+  -webkit-animation-name: css;
+  animation-name: css;
+}
+#skills #javascript {
+  -webkit-animation-name: javascript;
+  animation-name: javascript;
+}
+#skills #php {
+  -webkit-animation-name: php;
+  animation-name: php;
+}
+#skills #wordpress {
+  -webkit-animation-name: wordpress;
+  animation-name: wordpress;
+}
+#skills #mysql {
+  -webkit-animation-name: mysql;
+  animation-name: mysql;
+}
+@-webkit-keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-webkit-keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-webkit-keyframes javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-webkit-keyframes php {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@-webkit-keyframes wordpress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 55%;
+  }
+}
+@-webkit-keyframes mysql {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
 /* Slider */
 .slick-slider {
   position: relative;
@@ -790,7 +1013,7 @@ header #nav .navbar ul li:hover {
 
 /* Slider */
 .slick-loading .slick-list {
-  background: #fff url("../ajax-loader.gif") center center no-repeat;
+  background: #fff url("../images/ajax-loader.gif") center center no-repeat;
 }
 
 /* Icons */
@@ -952,7 +1175,10 @@ header #nav .navbar ul li:hover {
 @media (max-width: 370px) {
   .carousel img {
     margin: 100px auto;
-    width: 100%;
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
     padding: 0 10px;
   }
 }

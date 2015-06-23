@@ -1,5 +1,3 @@
-// @include box-sizing('border-box');
-
 body {
 	width: 100%;
 	height: 100vh;
@@ -27,13 +25,22 @@ h2 {
 	border-top: 2px solid lighten($grey, 15);
 	border-bottom: 2px solid lighten($grey, 15);
 	display: inline-block;
-	margin: 20px 0;
   	text-align: center;
 
   	@include breakpoint(max-width $small) {
-  		margin: 10px 0 20px;
-  		font-size: 2em;
+  		font-size: 2.2em;
   		line-height: 45px;
+  	}
+
+  	@include breakpoint(max-width 470px) {
+  		font-size: 1.7em;
+  	}
+
+  	@include breakpoint(max-width $narrow) {
+  		margin: 10px 0 5px;
+  		font-size: 1.4em;
+  		line-height: 40px;
+  		display: block;
   	}
 }
 
@@ -54,6 +61,10 @@ section h2 span:after {
 	border-bottom: 2px solid lighten($grey, 15);
 	width: 1000%;
 	top: 50%;
+
+	@include breakpoint(max-width $narrow) {
+		border: none;
+	}
 }
 
 section h2 span:before {
@@ -82,7 +93,7 @@ p {
 }
 
 * {
-  @include selection($pinky, $white);
+  @include selection(#45FA7B, $white);
 }
 
 .fullheight {
@@ -101,9 +112,5 @@ p {
 }
 
 .scene {
-	padding-top: 30px;
-
-	// @include breakpoint(max-width $small) {
-	// 	padding-top: 20px;
-	// }
+	padding-top: 40px;
 }

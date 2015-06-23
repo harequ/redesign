@@ -9,7 +9,7 @@
     	&:hover {
 			background: lighten($violet, 10);
 			h3 {
-				color: $white;
+				color: darken($white, 15);
 			}
     	}
     	&:first-child {
@@ -21,13 +21,21 @@
 	}
 
 	.project {
+    	padding: 40px 20px;
 		@include container(730px);
 		@include breakpoint(750px) {
 			@include display-flex();
 	    	@include align-items(center);
 	    	@include justify-content(center);
 		}
-    	padding: 40px 20px;
+		// @include breakpoint(max-width 750px) {
+		// 	padding-top: 25px;
+	 //    	padding-bottom: 25px;
+		// }
+	}
+
+	h2 {
+		margin-bottom: 10px;
 	}
 
 	.project img {

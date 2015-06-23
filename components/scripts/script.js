@@ -35,7 +35,7 @@ $(function() {
 
 	$(".scroll").click(function(event) {
 	    event.preventDefault();
-	    $('html, body').animate({ scrollTop : $(this.hash).offset().top - navHeight } , 700);
+	    $('html, body').animate({ scrollTop : $(this.hash).offset().top - navHeight +1 } , 700);
     });
 
 	$(window).scroll(function() {
