@@ -1,7 +1,9 @@
 header #nav {
+
+
 	@include clearfix;
 	z-index: 10;
-	background: $milky;
+	background: $awesome;
 	width: 100%;
 	opacity: 0.96;
 	overflow: hidden;
@@ -16,7 +18,7 @@ header #nav {
 		text-align: center;
 		height: 45px;
 
-		@include breakpoint (max-width 700px) {
+		@include breakpoint (max-width $small) {
 			display: block;
 			width: 100%;
 			position: relative;
@@ -55,8 +57,8 @@ header #nav {
 				height: 40px;
 				@include breakpoint (max-width 700px) {
 					float: none;
-					border-top: 1px solid lighten($milky, 3);
-					border-bottom: 1px solid darken($milky, 3);
+					border-top: 1px solid lighten($awesome, 3);
+					border-bottom: 1px solid darken($awesome, 3);
 					padding: 0px;
 				}
 				&:first-child a {
@@ -72,8 +74,8 @@ header #nav {
 					font-weight: 300;
 					text-decoration: none;
 					display: inline-block;
-					border-right: 1px solid darken($milky, 7);
-					border-left: 1px solid lighten($milky, 7);
+					border-right: 1px solid darken($awesome, 5);
+					border-left: 1px solid lighten($awesome, 5);
 					padding: 12px 20px;
 					
 	  				@include breakpoint (max-width $medium) {
@@ -86,13 +88,17 @@ header #nav {
 						padding: 6px;
 						width: 100%;
 					}
+
+					&.active {
+						background: lighten($awesome, 5);
+					}
 				} //a
 				transition: all 200ms;
 				&:hover {
 					border-top: 3px solid $pinky;
 					@include breakpoint (max-width $small) {
-						border-top: 1px solid lighten($milky, 3);
-						background-color: lighten($milky, 3);
+						border-top: 1px solid lighten($awesome, 3);
+						background-color: lighten($awesome, 3);
 					}
 				}
 			} //li
