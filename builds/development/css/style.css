@@ -249,6 +249,7 @@ header #nav .navbar ul {
 header #nav .navbar ul li {
   float: left;
   height: 40px;
+  transition: all 200ms;
 }
 @media (max-width: 700px) {
   header #nav .navbar ul li {
@@ -271,7 +272,6 @@ header #nav .navbar ul li a {
   text-decoration: none;
   display: inline-block;
   padding: 12px 20px;
-  transition: all 200ms;
 }
 @media (max-width: 960px) {
   header #nav .navbar ul li a {

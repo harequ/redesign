@@ -58,20 +58,25 @@ header #nav {
 			}
 
 			li {
+
 				float: left;
 				height: 40px;
+				transition: all 200ms;
+
 				@include breakpoint (max-width $small) {
 					float: none;
 					border-top: 1px solid darken($awesome, 5);
-					// border-bottom: 1px solid darken($awesome, 3);
 					padding: 0px;
 				}
+
 				&:first-child a {
 					border-left: none;
 				}
+
 				&:last-child a {
 					border-right: none;
 				}
+
 				a {
 					color: $creamy;
 					font-family: "Open Sans", "Times New Roman", serif;
@@ -80,7 +85,6 @@ header #nav {
 					text-decoration: none;
 					display: inline-block;
 					padding: 12px 20px;
-					transition: all 200ms;
 					
 	  				@include breakpoint (max-width $medium) {
 						font-size: 1.2em;
@@ -95,8 +99,10 @@ header #nav {
 						background: darken($awesome, 10);
 					}
 				} 
+
 				&:hover {
 					border-top: 3px solid $pinky;
+					
 					@include breakpoint (max-width $small) {
 						border-top: 1px solid darken($awesome, 5);
 						background-color: lighten($awesome, 3);
