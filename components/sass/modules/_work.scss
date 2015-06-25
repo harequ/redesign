@@ -7,9 +7,13 @@
 		border-top: 1px solid lighten($grey, 58);
     	border-bottom: 1px solid lighten($grey, 50);
     	&:hover {
-			background: lighten($violet, 10);
+			background: url('../images/triangular-bg.png') $violetWarm ;
 			h3 {
-				color: darken($white, 15);
+				color: $white;
+			}
+			p {
+				color: $white;
+				font-weight: 300;
 			}
     	}
     	&:first-child {
@@ -28,14 +32,10 @@
 	    	@include align-items(center);
 	    	@include justify-content(center);
 		}
-		// @include breakpoint(max-width 750px) {
-		// 	padding-top: 25px;
-	 //    	padding-bottom: 25px;
-		// }
 	}
 
 	h2 {
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 	}
 
 	.project img {
@@ -81,18 +81,22 @@
 	}
 
 	.project button {
-		padding: 10px 40px;
-		border: none;
+		border: 0;
 		background: $pinky;
-		color: $white;
-		@include border-radius(3px);
+		color: $creamy;
 		margin-top: 20px;
 		cursor: pointer;
 		outline: none;
+		width: 150px;
+		height: 40px;
+		transition: 200ms all;
+		&:hover {
+			border-top: 3px solid $creamy;
+		}
 
 		@include breakpoint(0 749px) {
 			width: 50%;
 			padding: 10px 20px;
 		}
 	}
-}
+} // #work

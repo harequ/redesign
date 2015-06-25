@@ -159,28 +159,16 @@ p {
   font-size: 0.9em;
   line-height: 24px;
   font-weight: 300;
-  color: #b3b3b3;
+  color: #a6a6a6;
 }
 
 *::-moz-selection {
-  color: #F4EED8;
+  color: #f0f0f0;
   background-color: #45FA7B;
 }
 *::selection {
-  color: #F4EED8;
+  color: #f0f0f0;
   background-color: #45FA7B;
-}
-
-.fullheight {
-  position: relative;
-  height: 100vh;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  overflow: hidden;
 }
 
 .stuck {
@@ -196,14 +184,14 @@ header #nav {
   overflow: hidden;
   *zoom: 1;
   z-index: 10;
-  background: #F9E270;
+  background: #A49A87;
   width: 100%;
-  opacity: 0.96;
+  opacity: 0.98;
   overflow: hidden;
 }
 header #nav #pull {
   display: none;
-  color: #F4EED8;
+  color: #F2EBC7;
   font-family: "Open Sans", "Times New Roman", serif;
   font-size: 1.4em;
   font-weight: 300;
@@ -237,15 +225,15 @@ header #nav .navbar {
   z-index: 3;
   text-align: center;
 }
-@media (max-width: 700px) {
-  header #nav .navbar {
-    display: none;
-  }
-}
 header #nav .navbar:after {
   content: " ";
   display: block;
   clear: both;
+}
+@media (max-width: 700px) {
+  header #nav .navbar {
+    display: none;
+  }
 }
 header #nav .navbar ul {
   display: inline-block;
@@ -261,13 +249,11 @@ header #nav .navbar ul {
 header #nav .navbar ul li {
   float: left;
   height: 40px;
-  transition: all 200ms;
 }
 @media (max-width: 700px) {
   header #nav .navbar ul li {
     float: none;
-    border-top: 1px solid #fae57f;
-    border-bottom: 1px solid #f8df61;
+    border-top: 1px solid #998e78;
     padding: 0px;
   }
 }
@@ -278,15 +264,14 @@ header #nav .navbar ul li:last-child a {
   border-right: none;
 }
 header #nav .navbar ul li a {
-  color: #F4EED8;
+  color: #F2EBC7;
   font-family: "Open Sans", "Times New Roman", serif;
   font-size: 1.4em;
   font-weight: 300;
   text-decoration: none;
   display: inline-block;
-  border-right: 1px solid #f8dd58;
-  border-left: 1px solid #fae788;
   padding: 12px 20px;
+  transition: all 200ms;
 }
 @media (max-width: 960px) {
   header #nav .navbar ul li a {
@@ -295,22 +280,20 @@ header #nav .navbar ul li a {
 }
 @media (max-width: 700px) {
   header #nav .navbar ul li a {
-    border-left: none;
-    border-right: none;
-    padding: 6px;
+    padding: 8px;
     width: 100%;
   }
 }
 header #nav .navbar ul li a.active {
-  background: #fae788;
+  background: #8d816b;
 }
 header #nav .navbar ul li:hover {
-  border-top: 3px solid #EF6F56;
+  border-top: 3px solid #FF974F;
 }
 @media (max-width: 700px) {
   header #nav .navbar ul li:hover {
-    border-top: 1px solid #fae57f;
-    background-color: #fae57f;
+    border-top: 1px solid #998e78;
+    background-color: #aba190;
   }
 }
 
@@ -322,6 +305,14 @@ header #nav .navbar ul li:hover {
   background-size: cover;
   position: relative;
   z-index: 1;
+  height: 100vh;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 #intro .logo {
@@ -347,21 +338,23 @@ header #nav .navbar ul li:hover {
 }
 
 #intro .hero-text {
+  font-size: 1.1em;
   padding-top: 20px;
   padding-bottom: 100px;
-  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 22px;
+  text-shadow: #644D52 0 0 20px;
 }
 @media (max-width: 700px) {
   #intro .hero-text {
     padding-bottom: 0;
+    font-size: 1em;
   }
 }
 
 #intro .hero-text p {
   line-height: 1.5;
   font-family: "Courgette", "Times New Roman", serif;
-  font-size: 1em;
-  color: #F4EED8;
+  font-size: 1.1em;
+  color: #f0f0f0;
   text-align: center;
   padding: 0 1em;
 }
@@ -422,7 +415,7 @@ header #nav .navbar ul li:hover {
   position: absolute;
   cursor: pointer;
   z-index: 3;
-  background: url("../images/arrow-down.png") no-repeat center 20px #F4EED8;
+  background: url("../images/arrow-down.png") no-repeat center 20px #F2EBC7;
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
   border-radius: 100px;
@@ -475,7 +468,7 @@ header #nav .navbar ul li:hover {
   font-weight: 600;
   line-height: 0.9;
   text-align: center;
-  color: #b1c0b1;
+  color: #F2EBC7;
 }
 
 #intro dl dd {
@@ -484,7 +477,7 @@ header #nav .navbar ul li:hover {
   font-size: 0.8em;
   line-height: 1.3;
   text-align: center;
-  color: #dbe2db;
+  color: white;
 }
 
 #work {
@@ -497,10 +490,14 @@ header #nav .navbar ul li:hover {
   border-bottom: 1px solid #e6e6e6;
 }
 #work .project-wrap:hover {
-  background: #71876d;
+  background: url("../images/triangular-bg.png") #644D52;
 }
 #work .project-wrap:hover h3 {
-  color: #e3d49c;
+  color: #f0f0f0;
+}
+#work .project-wrap:hover p {
+  color: #f0f0f0;
+  font-weight: 300;
 }
 #work .project-wrap:first-child {
   border-top: none;
@@ -530,7 +527,7 @@ header #nav .navbar ul li:hover {
   }
 }
 #work h2 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 #work .project img {
   width: 57.74648%;
@@ -587,16 +584,18 @@ header #nav .navbar ul li:hover {
   padding-bottom: 15px;
 }
 #work .project button {
-  padding: 10px 40px;
-  border: none;
-  background: #EF6F56;
-  color: #F4EED8;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  border: 0;
+  background: #FF974F;
+  color: #F2EBC7;
   margin-top: 20px;
   cursor: pointer;
   outline: none;
+  width: 150px;
+  height: 40px;
+  transition: 200ms all;
+}
+#work .project button:hover {
+  border-top: 3px solid #F2EBC7;
 }
 @media (min-width: 0) and (max-width: 749px) {
   #work .project button {
@@ -608,11 +607,7 @@ header #nav .navbar ul li:hover {
 #design {
   padding-left: 10px;
   padding-right: 10px;
-}
-@media (min-width: 700px) {
-  #design {
-    background: url("../images/triangular-bg.png");
-  }
+  background: url("../images/triangular-bg.png");
 }
 #design h3 {
   display: inline-block;
@@ -723,14 +718,9 @@ header #nav .navbar ul li:hover {
 }
 
 #skills {
-  background: #596B56;
+  background: url("../images/triangular-bg.png") #644D52;
   overflow: hidden;
   *zoom: 1;
-}
-@media (min-width: 700px) {
-  #skills {
-    background: url("../images/triangular-bg.png") #596B56;
-  }
 }
 #skills article {
   padding: 0 10px;
@@ -833,19 +823,19 @@ header #nav .navbar ul li:hover {
 #skills dt {
   float: left;
   padding: 2px;
-  color: #F4EED8;
+  color: #F2EBC7;
   font-size: 0.8em;
 }
 #skills dd {
-  background: #52634f;
+  background: #5b464b;
   border-radius: 2px;
 }
 #skills .bar {
   margin-bottom: 10px;
-  color: #F4EED8;
+  color: #F2EBC7;
   padding: 4px;
   text-align: center;
-  background-color: #71876d;
+  background-color: #81636a;
   border-radius: 2px;
   height: 28px;
   -webkit-animation-name: bar;

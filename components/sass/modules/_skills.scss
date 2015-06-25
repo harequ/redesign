@@ -1,11 +1,7 @@
 #skills {
 
-	background: $violet;
+	background: url('../images/triangular-bg.png') $violetWarm;
 	@include clearfix;
-
-	@include breakpoint($small) {
-		background: url('../images/triangular-bg.png') $violet ;
-	}
 
 	article {
 		padding: 0 10px;
@@ -72,21 +68,21 @@
 	dt {
 		float: left;
 		padding: 2px;
-		color: $white;
+		color: $creamy;
 		font-size: 0.8em;
 	}
 
 	dd {
-		background: darken($violet, 3);
+		background: darken($violetWarm, 3);
 		border-radius: 2px;
 	}
 
 	.bar {
 		margin-bottom: 10px;
-		color: $white;
+		color: $creamy;
 		padding: 4px;
 		text-align: center;
-		background-color: lighten($violet, 10);
+		background-color: lighten($violetWarm, 10);
 		border-radius: 2px;
 		height: 28px;
 		-webkit-animation-name: bar;

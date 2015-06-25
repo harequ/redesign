@@ -2,6 +2,11 @@
 	@include backImage("../images/mainpage-bg.jpg");
 	position: relative;
 	z-index: 1;
+	height: 100vh;
+	@include display-flex();
+    @include align-items(center);
+    @include justify-content(center);
+    overflow: hidden;
 }
 
 #intro .logo {
@@ -28,11 +33,13 @@
 }
 
 #intro .hero-text {
+	font-size: 1.1em;
 	padding-top: 20px;
 	padding-bottom: 100px;
-	@include text-shadow(rgba(black, 0.5) 1px 1px 22px);
+	@include text-shadow($violetWarm 0 0 20px);
 	@include breakpoint (max-width $small) {
 		padding-bottom: 0;
+		font-size: 1em;
 	}
 
 }
@@ -40,7 +47,7 @@
 #intro .hero-text p {
 	line-height: 1.5;
 	font-family: "Courgette", "Times New Roman", serif;
-	font-size: 1em;
+	font-size: 1.1em;
 	color: $white;
 	text-align: center;
 	padding: 0 1em;
@@ -96,7 +103,7 @@
 	position: absolute;
 	cursor: pointer;
 	z-index: 3;
-	background: url("../images/arrow-down.png") no-repeat center 20px $white;
+	background: url("../images/arrow-down.png") no-repeat center 20px $creamy;
 	@include border-radius(100px);
 	opacity:.8;
 	@include transition-property(background-position);

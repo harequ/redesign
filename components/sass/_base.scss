@@ -89,20 +89,11 @@ p {
 	font-size: 0.9em;
 	line-height: 24px;
 	font-weight: 300;
-	color: lighten($grey, 30);
+	color: lighten($grey, 25);
 }
 
 * {
   @include selection(#45FA7B, $white);
-}
-
-.fullheight {
-	position: relative;
-	height: 100vh;
-	@include display-flex();
-    @include align-items(center);
-    @include justify-content(center);
-    overflow: hidden;
 }
 
 .stuck {

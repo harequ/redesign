@@ -2,10 +2,7 @@
 
 	padding-left: 10px;
 	padding-right: 10px;
-	
-	@include breakpoint($small) {
-		background: url('../images/triangular-bg.png');
-	}
+	background: url('../images/triangular-bg.png');
 
 	h3 {
 		display: inline-block;
@@ -34,15 +31,10 @@
 		@include container;
 		text-align: center;
 		margin-top: 30px;
-
-		// @include breakpoint(max-width $small) {
-		// 	margin-top: 10px;
-		// }
 	}
 
 	#logos {
 		@include clearfix;
-		
 		@include breakpoint(max-width $small) {
 			margin-top: 30px;
 		}
