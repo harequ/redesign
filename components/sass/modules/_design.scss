@@ -40,12 +40,20 @@
 		}
 	}
 
-	#gallery img {
-		@include gallery(4 of 12);
-		@include gutters(after);
-		margin-bottom: gutter(12);
+	#gallery a img {
+		width: auto;
+		height: auto;
+		max-height: 100%;
+		max-width: 100%;
+	}
+
+	#gallery a {
+		line-height: 0;
 		border: 10px solid white;
 		@include box-shadow(0 0 3px lighten($grey, 40));
+		margin-bottom: gutter(12);
+		@include gallery(4);
+		@include gutters(after);
 
 		@include breakpoint(max-width $small) {
 			@include gallery(6 of 12);

@@ -33,15 +33,15 @@
 }
 
 #intro .hero-text {
-	font-size: 1.1em;
+	font-size: 1em;
 	padding-top: 20px;
 	padding-bottom: 100px;
-	@include text-shadow($violetWarm 0 0 20px);
+	@include text-shadow($violetWarm 0 0 30px);
 	@include breakpoint (max-width $small) {
-		padding-bottom: 0;
-		font-size: 1em;
+		padding-bottom: 38px;
+		font-size: 0.9em;
+		padding-top: 10px;
 	}
-
 }
 
 #intro .hero-text p {
