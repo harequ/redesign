@@ -297,6 +297,50 @@ header #nav .navbar ul li:hover {
   }
 }
 
+footer {
+  background: #47373a;
+}
+footer #contact {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+footer #contact:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+footer h2 {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  border: none;
+  font-family: "Roboto Slab", "Times New Roman", serif;
+  color: #fcfaf0;
+}
+footer a.email {
+  display: inline-block;
+  margin: 30px 0;
+  color: #644D52;
+  padding: 10px 20px;
+  background-color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+footer .copy {
+  padding: 20px;
+}
+footer .copy p {
+  line-height: 1.3;
+  font-size: 0.6em;
+  font-family: "Open Sans", "Times New Roman", serif;
+  font-weight: 300;
+  color: #3c2e31;
+}
+
 #intro section {
   background: url("../images/mainpage-bg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -335,13 +379,14 @@ header #nav .navbar ul li:hover {
   padding: 100px 0;
   width: 100%;
   z-index: 1;
+  margin-top: 10px;
 }
 
 #intro .hero-text {
   font-size: 1em;
   padding-top: 20px;
   padding-bottom: 100px;
-  text-shadow: #644D52 0 0 30px;
+  text-shadow: #644D52 0 0 40px;
 }
 @media (max-width: 700px) {
   #intro .hero-text {
@@ -407,20 +452,20 @@ header #nav .navbar ul li:hover {
 }
 
 #intro .arrow {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   left: 50%;
-  bottom: -105px;
-  margin-left: -75px;
+  bottom: -88px;
+  margin-left: -60px;
   text-align: center;
   position: absolute;
   cursor: pointer;
   z-index: 3;
-  background: url("../images/arrow-down.png") no-repeat center 20px #F2EBC7;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-  border-radius: 100px;
-  opacity: .8;
+  background: url("../images/arrow-down.png") no-repeat center 13px #f0f0f0;
+  -moz-border-radius: 120px;
+  -webkit-border-radius: 120px;
+  border-radius: 120px;
+  opacity: 0.7;
   -moz-transition-property: background-position;
   -o-transition-property: background-position;
   -webkit-transition-property: background-position;
@@ -431,7 +476,7 @@ header #nav .navbar ul li:hover {
   transition-duration: 0.2s;
 }
 #intro .arrow:hover {
-  background-position: center 24px;
+  background-position: center 16px;
 }
 
 #intro dl {
@@ -482,16 +527,16 @@ header #nav .navbar ul li:hover {
 }
 
 #work {
-  background: url("../images/noisy-bg.gif");
+  background: url("../images/paper-bg.png");
 }
 #work .project-wrap {
   width: 100%;
   transition: all 200ms;
-  border-top: 1px solid #fafafa;
-  border-bottom: 1px solid #e6e6e6;
+  border-top: 1px dashed #c3bcb0;
 }
 #work .project-wrap:hover {
   background: url("../images/triangular-bg.png") #644D52;
+  border-top: 1px solid #c3bcb0;
 }
 #work .project-wrap:hover h3 {
   color: #f0f0f0;
@@ -729,6 +774,7 @@ header #nav .navbar ul li:hover {
   background: url("../images/triangular-bg.png") #644D52;
   overflow: hidden;
   *zoom: 1;
+  padding-bottom: 200px;
 }
 #skills article {
   padding: 0 10px;
@@ -798,6 +844,14 @@ header #nav .navbar ul li:hover {
   margin-right: 0;
   padding-left: 20px;
 }
+#skills article .toolz ul li {
+  line-height: 0.8;
+  padding-bottom: 12px;
+}
+#skills article .toolz ul span {
+  font-size: 0.7em;
+  margin-top: -10px;
+}
 @media (max-width: 750px) {
   #skills article .toolz {
     width: 32.20339%;
@@ -846,34 +900,42 @@ header #nav .navbar ul li:hover {
   background-color: #81636a;
   border-radius: 2px;
   height: 28px;
-  -webkit-animation-name: bar;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-out;
 }
-#skills #html {
-  -webkit-animation-name: html;
-  animation-name: html;
+#skills .html {
+  animation: html 1.2s ease-out forwards;
+  -webkit-animation: html 1.2s ease-out forwards;
+  -moz-animation: html 1.2s ease-out forwards;
+  -o-animation: html 1.2s ease-out forwards;
 }
-#skills #css {
-  -webkit-animation-name: css;
-  animation-name: css;
+#skills .css {
+  animation: css 1.2s ease-out forwards;
+  -webkit-animation: css 1.2s ease-out forwards;
+  -moz-animation: css 1.2s ease-out forwards;
+  -o-animation: css 1.2s ease-out forwards;
 }
-#skills #javascript {
-  -webkit-animation-name: javascript;
-  animation-name: javascript;
+#skills .javascript {
+  animation: javascript 1.2s ease-out forwards;
+  -webkit-animation: javascript 1.2s ease-out forwards;
+  -moz-animation: javascript 1.2s ease-out forwards;
+  -o-animation: javascript 1.2s ease-out forwards;
 }
-#skills #php {
-  -webkit-animation-name: php;
-  animation-name: php;
+#skills .php {
+  animation: php 1.2s ease-out forwards;
+  -webkit-animation: php 1.2s ease-out forwards;
+  -moz-animation: php 1.2s ease-out forwards;
+  -o-animation: php 1.2s ease-out forwards;
 }
-#skills #wordpress {
-  -webkit-animation-name: wordpress;
-  animation-name: wordpress;
+#skills .wordpress {
+  animation: wordpress 1.2s ease-out forwards;
+  -webkit-animation: wordpress 1.2s ease-out forwards;
+  -moz-animation: wordpress 1.2s ease-out forwards;
+  -o-animation: wordpress 1.2s ease-out forwards;
 }
-#skills #mysql {
-  -webkit-animation-name: mysql;
-  animation-name: mysql;
+#skills .mysql {
+  animation: mysql 1.2s ease-out forwards;
+  -webkit-animation: mysql 1.2s ease-out forwards;
+  -moz-animation: mysql 1.2s ease-out forwards;
+  -o-animation: mysql 1.2s ease-out forwards;
 }
 @-webkit-keyframes html {
   0% {

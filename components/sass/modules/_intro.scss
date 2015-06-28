@@ -30,13 +30,14 @@
 	padding: 100px 0;
 	width: 100%;
 	z-index: 1;
+	margin-top: 10px;
 }
 
 #intro .hero-text {
 	font-size: 1em;
 	padding-top: 20px;
 	padding-bottom: 100px;
-	@include text-shadow($violetWarm 0 0 30px);
+	@include text-shadow($violetWarm 0 0 40px);
 	@include breakpoint (max-width $small) {
 		padding-bottom: 38px;
 		font-size: 0.9em;
@@ -94,23 +95,23 @@
 }
 
 #intro .arrow {
-	width: 150px;
-	height: 150px;
+	width: 120px;
+	height: 120px;
 	left: 50%;
-	bottom: -105px;
-	margin-left: -75px;
+	bottom: -88px;
+	margin-left: -60px;
 	text-align: center;
 	position: absolute;
 	cursor: pointer;
 	z-index: 3;
-	background: url("../images/arrow-down.png") no-repeat center 20px $creamy;
-	@include border-radius(100px);
-	opacity:.8;
+	background: url("../images/arrow-down.png") no-repeat center 13px $white;
+	@include border-radius(120px);
+	opacity: 0.7;
 	@include transition-property(background-position);
 	@include transition-duration(.2s);
 
 	&:hover {
-		background-position: center 24px;
+		background-position: center 16px;
 	}
 }
 

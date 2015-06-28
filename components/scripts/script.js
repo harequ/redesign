@@ -126,4 +126,34 @@ $(function() {
         });
 	}
 
+	/*
+	=============================================
+	=== Trigger for skills graph animation
+	=============================================
+	*/
+	var html = $('#html'),
+		css = $('#css'),
+		javascript = $('#javascript'),
+		php = $('#php'),
+		wordpress = $('#wordpress'),
+		mysql = $('#mysql');
+
+	$('.skillz').waypoint(function(direction) {
+		if(direction == 'down') {
+			html.addClass('html');
+			css.addClass('css');
+			javascript.addClass('javascript');
+			php.addClass('php');
+			wordpress.addClass('wordpress');
+			mysql.addClass('mysql');
+		} else {
+			html.removeClass('html');
+			css.removeClass('css');
+			javascript.removeClass('javascript');
+			php.removeClass('php');
+			wordpress.removeClass('wordpress');
+			mysql.removeClass('mysql');
+		}
+	}, {offset : '95%'});
+
 });

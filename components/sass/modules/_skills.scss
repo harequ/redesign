@@ -2,6 +2,7 @@
 
 	background: url('../images/triangular-bg.png') $violetWarm;
 	@include clearfix;
+	padding-bottom: 200px;
 
 	article {
 		padding: 0 10px;
@@ -40,6 +41,16 @@
 			}
 		}
 		.toolz {
+			ul {
+				li {
+					line-height: 0.8;
+					padding-bottom: 12px;
+				}
+				span {
+					font-size: 0.7em;
+					margin-top: -10px;
+				}
+			}
 			@include span(3 last);
 			@include prefix(20px);
 			@include breakpoint(max-width 750px) {
@@ -85,18 +96,49 @@
 		background-color: lighten($violetWarm, 10);
 		border-radius: 2px;
 		height: 28px;
-		-webkit-animation-name: bar;
-		-webkit-animation-duration: 1s;
-		-webkit-animation-iteration-count: 1;
-		-webkit-animation-timing-function: ease-out;
+	}
+	
+	.html {
+		animation: html 1.2s ease-out forwards;
+		-webkit-animation: html 1.2s ease-out forwards;
+		-moz-animation: html 1.2s ease-out forwards;
+		-o-animation: html 1.2s ease-out forwards;
 	}
 
-	#html { -webkit-animation-name: html; animation-name: html;}
-	#css { -webkit-animation-name: css; animation-name: css;}
-	#javascript { -webkit-animation-name: javascript; animation-name: javascript;}
-	#php { -webkit-animation-name: php; animation-name: php;}
-	#wordpress { -webkit-animation-name: wordpress; animation-name: wordpress;}
-	#mysql { -webkit-animation-name: mysql; animation-name: mysql;}
+	.css {
+		animation: css 1.2s ease-out forwards;
+		-webkit-animation: css 1.2s ease-out forwards;
+		-moz-animation: css 1.2s ease-out forwards;
+		-o-animation: css 1.2s ease-out forwards;
+	}
+
+	.javascript {
+		animation: javascript 1.2s ease-out forwards;
+		-webkit-animation: javascript 1.2s ease-out forwards;
+		-moz-animation: javascript 1.2s ease-out forwards;
+		-o-animation: javascript 1.2s ease-out forwards;
+	}
+
+	.php {
+		animation: php 1.2s ease-out forwards;
+		-webkit-animation: php 1.2s ease-out forwards;
+		-moz-animation: php 1.2s ease-out forwards;
+		-o-animation: php 1.2s ease-out forwards;
+	}
+
+	.wordpress {
+		animation: wordpress 1.2s ease-out forwards;
+		-webkit-animation: wordpress 1.2s ease-out forwards;
+		-moz-animation: wordpress 1.2s ease-out forwards;
+		-o-animation: wordpress 1.2s ease-out forwards;
+	}
+
+	.mysql {
+		animation: mysql 1.2s ease-out forwards;
+		-webkit-animation: mysql 1.2s ease-out forwards;
+		-moz-animation: mysql 1.2s ease-out forwards;
+		-o-animation: mysql 1.2s ease-out forwards;
+	}
 
 
 	@-webkit-keyframes html {
