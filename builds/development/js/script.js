@@ -10365,7 +10365,7 @@ $(function() {
 		    $('a[href$="#skills"]').addClass('active');
 	    }
 
-	    if(windowPos > $('#contact').offset().top) {
+	    if(windowPos > $('footer').offset().top) {
 		    $('.navbar li a').removeClass('active');
 		    $('a[href$="#contact"]').addClass('active');
 	    }

@@ -2,11 +2,7 @@
 
 	background: url('../images/triangular-bg.png') $violetWarm;
 	@include clearfix;
-	padding-bottom: 200px;
-
-	article {
-		padding: 0 10px;
-	}
+	padding-bottom: 45px;
 
 	img {
 		width: auto;
@@ -19,7 +15,12 @@
 	}
 
 	article {
-		margin-bottom: 30px;
+		padding: 50px 10px;
+
+		@include breakpoint(max-width 800px) {
+			padding: 0 10px;
+		}
+		// margin-bottom: 30px;
 		@include container;
 		img {		
 			@include span(5);
@@ -93,7 +94,7 @@
 		color: $creamy;
 		padding: 4px;
 		text-align: center;
-		background-color: lighten($violetWarm, 10);
+		background-color: lighten($violetWarm, 8);
 		border-radius: 2px;
 		height: 28px;
 	}
