@@ -5,7 +5,11 @@ footer {
 	position: relative;
 
 	@include breakpoint(max-width 800px) {
-		height: auto;
+		// height: auto;
+	}
+
+	@include breakpoint(max-width $narrow) {
+		height: 100vh;
 	}
 
 	.footer-wrap {
@@ -22,7 +26,7 @@ footer {
 		padding-top: 0;
 
 		@include breakpoint(max-width 800px) {
-			padding-top: 30px;
+			padding-top: 60px;
 		}
 	}
 
@@ -33,9 +37,7 @@ footer {
 		padding-top: 30px;
 
 		@include breakpoint(max-width 800px) {
-			background: url("../images/paper-bg.png");
-			height: auto;
-			padding-top: 0;
+			display: none;
 		}
 	}
 
@@ -43,6 +45,11 @@ footer {
 		background-color: darken($violetWarm, 10);
 		text-align: center;
 		@include clearfix;
+
+		@include breakpoint(max-width 800px) {
+			height: 100vh;
+			padding-top: 50%;
+		}
 	}
 
 	h2 {

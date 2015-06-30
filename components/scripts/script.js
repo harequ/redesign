@@ -14,7 +14,7 @@ $(function() {
 		menu = $('#nav .navbar'),
 		menuHeight = menu.height();
 
-	// Smoth scrolling
+	// Smooth scrolling
 	$(".scroll").click(function(event) {
 	    event.preventDefault();
 	    $('html, body').animate({ scrollTop : $(this.hash).offset().top - navHeight +1 } , 700);
@@ -79,7 +79,7 @@ $(function() {
 
 	// When menu is opened (in mobile version), slideup the menu when clicking anywhere outside
 	$(document).on('click', function(event) {
-		if (!$(event.target).closest('#pull').length && pull.is(':visible') && menu.is(':visible')) {
+		if (!$(event.target).closest(pull).length && pull.is(':visible') && menu.is(':visible')) {
 			menu.slideUp();
 		}
 	});
@@ -155,5 +155,26 @@ $(function() {
 			mysql.removeClass('mysql');
 		}
 	}, {offset : '95%'});
+
+	/*
+	=============================================
+	=== Modal overlay window (submit form) 
+	=============================================
+	*/
+	$('.email').click(function() {
+		$('.overlay').addClass('show-modal');
+		return false;
+	});
+
+	$('.close-btn').click(function() {
+		$('.overlay').removeClass('show-modal');
+	});
+
+	$('.overlay').click(function(event) {
+		if(event.target == this) {
+			$('.overlay').removeClass('show-modal');
+		}
+	});
+
 
 });
