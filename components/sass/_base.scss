@@ -103,4 +103,8 @@ p {
 
 .scene {
 	padding-top: 40px;
+
+	@include breakpoint(max-width $narrow) {
+		padding-top: 20px;
+	}
 }

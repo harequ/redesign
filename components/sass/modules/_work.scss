@@ -28,15 +28,23 @@
 	.project {
     	padding: 40px 20px;
 		@include container(730px);
-		@include breakpoint(750px) {
-			@include display-flex();
-	    	@include align-items(center);
-	    	@include justify-content(center);
+		// @include breakpoint(750px) {
+		// 	@include display-flex();
+	 //    	@include align-items(center);
+	 //    	@include justify-content(center);
+		// }
+		&:first-child {
+			padding-top: 30px;
+			padding-bottom: 30px;
 		}
 	}
 
 	h2 {
 		margin-bottom: 20px;
+
+		@include breakpoint(max-width 750px) {
+			margin-bottom: 10px;
+		}
 	}
 
 	.project img {
