@@ -74,6 +74,13 @@ main {
   z-index: 2;
 }
 
+a {
+  color: gray;
+}
+a:hover {
+  text-decoration: none;
+}
+
 h1 {
   font-family: "Open Sans", "Times New Roman", serif;
   font-size: 0.9em;
@@ -164,16 +171,20 @@ p {
 
 *::-moz-selection {
   color: #f0f0f0;
-  background-color: #45FA7B;
+  background-color: #49D3CC;
 }
 *::selection {
   color: #f0f0f0;
-  background-color: #45FA7B;
+  background-color: #49D3CC;
 }
 
 .stuck {
   position: fixed;
   top: 0;
+}
+
+#wrapper {
+  background: url("../images/triangular-bg.png");
 }
 
 .scene {
@@ -191,7 +202,7 @@ header #nav {
   z-index: 10;
   background: #A49A87;
   width: 100%;
-  opacity: 0.98;
+  opacity: 0.9;
   overflow: hidden;
 }
 header #nav #pull {
@@ -690,7 +701,6 @@ footer .copy p {
 #design {
   padding-left: 10px;
   padding-right: 10px;
-  background: url("../images/triangular-bg.png");
 }
 #design h3 {
   display: inline-block;
@@ -1268,6 +1278,78 @@ footer .copy p {
 }
 .overlay .modal input[type="submit"]:hover {
   border-top: 3px solid #FF974F;
+}
+
+.overview {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 10px;
+}
+.overview:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.overview h2 {
+  margin-top: 20px;
+  border-top: none;
+  border-bottom: none;
+}
+@media (max-width: 960px) {
+  .overview h2 {
+    margin: 10px 0;
+  }
+}
+@media (max-width: 960px) {
+  .overview p {
+    font-size: 0.9em;
+  }
+}
+.overview div {
+  position: relative;
+  line-height: 0;
+  border: 10px solid white;
+  -moz-box-shadow: 0 0 3px #cccccc;
+  -webkit-box-shadow: 0 0 3px #cccccc;
+  box-shadow: 0 0 3px #cccccc;
+  margin: 50px 0;
+}
+.overview div:before {
+  content: "";
+  position: absolute;
+  left: 25%;
+  bottom: -35px;
+  height: 1px;
+  width: 50%;
+  border-bottom: 1px dashed #e6e6e6;
+}
+.overview div img {
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+.overview section {
+  text-align: center;
+}
+.overview section a {
+  border-radius: 100px;
+  display: inline-block;
+  border: 0;
+  margin: 0 0 40px;
+  background: url("../images/arrow-prev.png") no-repeat 16px 25px #f0f0f0;
+  color: #b3b3b3;
+  cursor: pointer;
+  outline: none;
+  width: 80px;
+  height: 80px;
+  transition: 200ms all;
+  opacity: 0.7;
+}
+.overview section a:hover {
+  color: #cccccc;
+  opacity: 0.9;
 }
 
 /* Slider */

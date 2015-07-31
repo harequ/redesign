@@ -5,7 +5,7 @@
 		width: 100%;
 		transition: all 200ms;
 		border-top: 1px dashed lighten($awesome, 14);
-    	// border-bottom: 1px solid darken($creamy, 1);
+
     	&:hover {
 			background: url('../images/triangular-bg.png') $violetWarm ;
 			border-top: 1px solid lighten($awesome, 14);

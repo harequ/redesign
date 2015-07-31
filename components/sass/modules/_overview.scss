@@ -1,0 +1,71 @@
+.overview {
+	@include container;
+	padding: 20px 10px;
+
+	h2 {
+		margin-top: 20px;
+		border-top: none;
+		border-bottom: none;
+
+		@include breakpoint(max-width $medium) {
+			margin: 10px 0;
+	  	}
+	}
+
+	p {
+		@include breakpoint(max-width $medium) {
+	  		font-size: 0.9em;
+	  	}
+	}
+
+	div {
+		position: relative;
+
+		&:before {
+			content : "";
+			position: absolute;
+			left    : 25%;
+			bottom  : -35px;
+			height  : 1px;
+			width   : 50%;
+			border-bottom: 1px dashed lighten($grey, 50);
+		}
+
+		img {
+			width: auto;
+			height: auto;
+			max-height: 100%;
+			max-width: 100%;
+		}
+
+		line-height: 0;
+		border: 10px solid white;
+		@include box-shadow(0 0 3px lighten($grey, 40));
+		margin: 50px 0;
+	}
+
+	section {
+		text-align: center;
+
+		a {
+			border-radius: 100px;
+			display: inline-block;
+			border: 0;
+			margin: 0 0 40px;
+			background: url("../images/arrow-prev.png") no-repeat 16px 25px #f0f0f0;
+			color: lighten($grey, 30);
+			cursor: pointer;
+			outline: none;
+			width: 80px;
+			height: 80px;
+			transition: 200ms all;
+			opacity: 0.7;
+			&:hover {
+				color: lighten($grey, 40);
+				opacity: 0.9;
+			}
+		}
+		
+	}
+	
+}

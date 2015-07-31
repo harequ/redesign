@@ -10,6 +10,14 @@ main {
 	z-index: 2;
 }
 
+a {
+	color: lighten($grey, 10);
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 h1 {
 	font-family: "Open Sans", "Times New Roman", serif;
 	font-size: 0.9em;
@@ -93,12 +101,16 @@ p {
 }
 
 * {
-  @include selection(#45FA7B, $white);
+  @include selection(#49D3CC, $white);
 }
 
 .stuck {
 	position: fixed;
 	top: 0;
+}
+
+#wrapper {
+	background: url('../images/triangular-bg.png');
 }
 
 .scene {
