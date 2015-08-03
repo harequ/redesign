@@ -3,6 +3,8 @@
 	padding: 20px 10px;
 
 	h2 {
+		@include full;
+		text-align: left;
 		margin-top: 20px;
 		border-top: none;
 		border-bottom: none;
@@ -18,50 +20,108 @@
 	  	}
 	}
 
-	div {
-		position: relative;
+	.desc {
+		@include span(9);
+		@include suffix(20px);
 
-		&:before {
-			content : "";
-			position: absolute;
-			left    : 25%;
-			bottom  : -35px;
-			height  : 1px;
-			width   : 50%;
-			border-bottom: 1px dashed lighten($grey, 50);
+		@include breakpoint(max-width 800px) {
+			@include full;
 		}
-
-		img {
-			width: auto;
-			height: auto;
-			max-height: 100%;
-			max-width: 100%;
-		}
-
-		line-height: 0;
-		border: 10px solid white;
-		@include box-shadow(0 0 3px lighten($grey, 40));
-		margin: 50px 0;
 	}
 
-	section {
-		text-align: center;
+	.role {
+		@include span(3 last);
+
+		@include breakpoint(max-width 800px) {
+			@include full;
+			margin-top: 20px;
+		}
+
+		p {
+			color: lighten($grey, 35);
+			font-weight: bold;
+			// font-style: italic;
+		}
+
+		ul{
+		list-style: none inside;
+		}
+
+		ul li {
+			&:before {
+				content: "\2043";
+				margin-left: 0ex;
+				margin-right: 1ex;
+			}
+		}
+
+		ul {
+			font-size: 0.9em;
+			font-style: italic;
+		}
+	}
+
+	section.pr-description {
+		@include clearfix;
+	}
+
+
+	section.pr-images {
+		padding-top: 0;
+		div {
+			position: relative;
+
+			&:before {
+				content : "";
+				position: absolute;
+				left    : 45%;
+				bottom  : -35px;
+				height  : 1px;
+				width   : 10%;
+				border-bottom: 1px solid lighten($grey, 50);
+			}
+
+			&:first-of-type {
+				margin-top: 40px;
+			}
+
+			&:last-of-type {
+				margin-bottom: 20px;
+				&:before {
+					display: none;
+				}
+			}
+
+			img {
+				width: auto;
+				height: auto;
+				max-height: 100%;
+				max-width: 100%;
+			}
+
+			line-height: 0;
+			border: 10px solid white;
+			@include box-shadow(0 0 3px lighten($grey, 40));
+			margin: 50px 0;
+		}
 
 		a {
-			border-radius: 100px;
+			border-radius: 3px;
 			display: inline-block;
 			border: 0;
-			margin: 0 0 40px;
-			background: url("../images/arrow-prev.png") no-repeat 16px 25px #f0f0f0;
-			color: lighten($grey, 30);
+			margin-bottom: 50px;
+			background: url("../images/arrow-prev.png") no-repeat;
+			background-position: 2px 13px;
+			// color: lighten($grey, 30);
 			cursor: pointer;
 			outline: none;
-			width: 80px;
-			height: 80px;
-			transition: 200ms all;
+			width: 50px;
+			height: 50px;
+			transition: 100ms all;
 			opacity: 0.7;
 			&:hover {
 				color: lighten($grey, 40);
+				background-position: 0px 13px;
 				opacity: 0.9;
 			}
 		}

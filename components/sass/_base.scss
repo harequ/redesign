@@ -15,6 +15,7 @@ a {
 
 	&:hover {
 		text-decoration: none;
+		color: $pinky;
 	}
 }
 
@@ -119,4 +120,8 @@ p {
 	@include breakpoint(max-width $narrow) {
 		padding-top: 20px;
 	}
+}
+
+.hide {
+	display: none;
 }

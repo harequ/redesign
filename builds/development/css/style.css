@@ -79,6 +79,7 @@ a {
 }
 a:hover {
   text-decoration: none;
+  color: #FF895A;
 }
 
 h1 {
@@ -196,14 +197,23 @@ p {
   }
 }
 
+.hide {
+  display: none;
+}
+
 header #nav {
-  overflow: hidden;
-  *zoom: 1;
   z-index: 10;
   background: #A49A87;
   width: 100%;
   opacity: 0.9;
   overflow: hidden;
+}
+header #nav:before, header #nav:after {
+  content: '';
+  display: table;
+}
+header #nav:after {
+  clear: both;
 }
 header #nav #pull {
   display: none;
@@ -305,7 +315,7 @@ header #nav .navbar ul li a.active {
   background: #8d816b;
 }
 header #nav .navbar ul li:hover {
-  border-top: 3px solid #FF974F;
+  border-top: 3px solid #FF895A;
 }
 @media (max-width: 700px) {
   header #nav .navbar ul li:hover {
@@ -357,8 +367,13 @@ footer .tree {
 footer #contact {
   background-color: #47373a;
   text-align: center;
-  overflow: hidden;
-  *zoom: 1;
+}
+footer #contact:before, footer #contact:after {
+  content: '';
+  display: table;
+}
+footer #contact:after {
+  clear: both;
 }
 footer h2 {
   clear: both;
@@ -383,7 +398,7 @@ footer a.email {
   height: 45px;
 }
 footer a.email:hover {
-  border-top: 3px solid #FF974F;
+  border-top: 3px solid #FF895A;
 }
 footer .copy {
   padding-top: 20px;
@@ -679,7 +694,7 @@ footer .copy p {
 }
 #work .project button {
   border: 0;
-  background: #FF974F;
+  background: #FF895A;
   color: #F2EBC7;
   margin-top: 20px;
   cursor: pointer;
@@ -736,9 +751,12 @@ footer .copy p {
   display: block;
   clear: both;
 }
-#design #logos {
-  overflow: hidden;
-  *zoom: 1;
+#design #logos:before, #design #logos:after {
+  content: '';
+  display: table;
+}
+#design #logos:after {
+  clear: both;
 }
 @media (max-width: 700px) {
   #design #logos {
@@ -819,9 +837,14 @@ footer .copy p {
 
 #skills {
   background: url("../images/triangular-bg.png") #644D52;
-  overflow: hidden;
-  *zoom: 1;
   padding-bottom: 45px;
+}
+#skills:before, #skills:after {
+  content: '';
+  display: table;
+}
+#skills:after {
+  clear: both;
 }
 #skills img {
   width: auto;
@@ -1277,7 +1300,7 @@ footer .copy p {
   font-weight: 400;
 }
 .overlay .modal input[type="submit"]:hover {
-  border-top: 3px solid #FF974F;
+  border-top: 3px solid #FF895A;
 }
 
 .overview {
@@ -1292,6 +1315,12 @@ footer .copy p {
   clear: both;
 }
 .overview h2 {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
   margin-top: 20px;
   border-top: none;
   border-bottom: none;
@@ -1306,7 +1335,63 @@ footer .copy p {
     font-size: 0.9em;
   }
 }
-.overview div {
+.overview .desc {
+  width: 74.57627%;
+  float: left;
+  margin-right: 1.69492%;
+  padding-right: 20px;
+}
+@media (max-width: 800px) {
+  .overview .desc {
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.overview .role {
+  width: 23.72881%;
+  float: right;
+  margin-right: 0;
+}
+@media (max-width: 800px) {
+  .overview .role {
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+}
+.overview .role p {
+  color: #bfbfbf;
+  font-weight: bold;
+}
+.overview .role ul {
+  list-style: none inside;
+}
+.overview .role ul li:before {
+  content: "\2043";
+  margin-left: 0ex;
+  margin-right: 1ex;
+}
+.overview .role ul {
+  font-size: 0.9em;
+  font-style: italic;
+}
+.overview section.pr-description:before, .overview section.pr-description:after {
+  content: '';
+  display: table;
+}
+.overview section.pr-description:after {
+  clear: both;
+}
+.overview section.pr-images {
+  padding-top: 0;
+}
+.overview section.pr-images div {
   position: relative;
   line-height: 0;
   border: 10px solid white;
@@ -1315,40 +1400,47 @@ footer .copy p {
   box-shadow: 0 0 3px #cccccc;
   margin: 50px 0;
 }
-.overview div:before {
+.overview section.pr-images div:before {
   content: "";
   position: absolute;
-  left: 25%;
+  left: 45%;
   bottom: -35px;
   height: 1px;
-  width: 50%;
-  border-bottom: 1px dashed #e6e6e6;
+  width: 10%;
+  border-bottom: 1px solid #e6e6e6;
 }
-.overview div img {
+.overview section.pr-images div:first-of-type {
+  margin-top: 40px;
+}
+.overview section.pr-images div:last-of-type {
+  margin-bottom: 20px;
+}
+.overview section.pr-images div:last-of-type:before {
+  display: none;
+}
+.overview section.pr-images div img {
   width: auto;
   height: auto;
   max-height: 100%;
   max-width: 100%;
 }
-.overview section {
-  text-align: center;
-}
-.overview section a {
-  border-radius: 100px;
+.overview section.pr-images a {
+  border-radius: 3px;
   display: inline-block;
   border: 0;
-  margin: 0 0 40px;
-  background: url("../images/arrow-prev.png") no-repeat 16px 25px #f0f0f0;
-  color: #b3b3b3;
+  margin-bottom: 50px;
+  background: url("../images/arrow-prev.png") no-repeat;
+  background-position: 2px 13px;
   cursor: pointer;
   outline: none;
-  width: 80px;
-  height: 80px;
-  transition: 200ms all;
+  width: 50px;
+  height: 50px;
+  transition: 100ms all;
   opacity: 0.7;
 }
-.overview section a:hover {
+.overview section.pr-images a:hover {
   color: #cccccc;
+  background-position: 0px 13px;
   opacity: 0.9;
 }
 

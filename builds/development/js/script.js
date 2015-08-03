@@ -10308,12 +10308,14 @@ $(function() {
 		snow = $('.snow'),
 		threeCircles = $('#intro dl'),
 		nav = $('#nav'),
-		navOffset = $('#nav').offset().top,
-		navHeight = nav.outerHeight(),
 		pull = $('#pull'),
-		menu = $('#nav .navbar'),
-		menuHeight = menu.height();
+		menu = $('#nav .navbar');
 
+	if(nav.length) {
+		var	navOffset = $('#nav').offset().top,
+			navHeight = nav.outerHeight(),
+			menuHeight = menu.height();
+	}
 	// Smooth scrolling
 	$(".scroll").click(function(event) {
 	    event.preventDefault();
@@ -10346,29 +10348,31 @@ $(function() {
 	    threeCircles.css('opacity', opacity2);
 
 	    // Highlighting active nav menu items
-	    var windowPos = offset + navHeight;
+	    if(nav.length) {
+		    var windowPos = offset + navHeight;
 
-	    $('.navbar li a').removeClass('active');
-
-	    if(windowPos > $('#work').offset().top) {
 		    $('.navbar li a').removeClass('active');
-		    $('a[href$="#work"]').addClass('active');
-	    }
 
-	    if(windowPos > $('#design').offset().top) {
-		    $('.navbar li a').removeClass('active');
-		    $('a[href$="#design"]').addClass('active');
-	    }
+		    if(windowPos > $('#work').offset().top) {
+			    $('.navbar li a').removeClass('active');
+			    $('a[href$="#work"]').addClass('active');
+		    }
 
-	    if(windowPos > $('#skills').offset().top) {
-		    $('.navbar li a').removeClass('active');
-		    $('a[href$="#skills"]').addClass('active');
-	    }
+		    if(windowPos > $('#design').offset().top) {
+			    $('.navbar li a').removeClass('active');
+			    $('a[href$="#design"]').addClass('active');
+		    }
 
-	    if(windowPos > $('footer').offset().top) {
-		    $('.navbar li a').removeClass('active');
-		    $('a[href$="#contact"]').addClass('active');
-	    }
+		    if(windowPos > $('#skills').offset().top) {
+			    $('.navbar li a').removeClass('active');
+			    $('a[href$="#skills"]').addClass('active');
+		    }
+
+		    if(windowPos > $('footer').offset().top) {
+			    $('.navbar li a').removeClass('active');
+			    $('a[href$="#contact"]').addClass('active');
+		    }
+		}
 	});
 
 	// When clicking on Menu button, it toggles the menu
@@ -10406,9 +10410,11 @@ $(function() {
 	=== Sticky nav 
 	=============================================
 	*/
-	var sticky = new Waypoint.Sticky({
-	  element: $(nav)
-	});
+	if(nav.length) {
+		var sticky = new Waypoint.Sticky({
+		  element: $(nav)
+		});
+	}
 
 	/*
 	=============================================

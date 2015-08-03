@@ -20,7 +20,7 @@
 		@include breakpoint(max-width 800px) {
 			padding: 0 10px;
 		}
-		// margin-bottom: 30px;
+		
 		@include container;
 		img {		
 			@include span(5);

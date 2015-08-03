@@ -5,3 +5,14 @@
 	-o-background-size: cover;
 	background-size: cover;
 }
+
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
