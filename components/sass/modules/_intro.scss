@@ -107,7 +107,7 @@
 	background: url("../images/arrow-down.png") no-repeat center 13px $white;
 	@include border-radius(120px);
 	opacity: 0.7;
-	transition: all 200ms ease-in-out;
+	transition: all 200ms;
 
 	&:hover {
 		background-position: center 16px;

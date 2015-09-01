@@ -276,7 +276,8 @@ header #nav .navbar ul {
 header #nav .navbar ul li {
   float: left;
   height: 40px;
-  transition: all 200ms;
+  border-top: 0px solid #FF895A;
+  transition: all 100ms linear;
 }
 @media (max-width: 700px) {
   header #nav .navbar ul li {
@@ -394,7 +395,8 @@ footer a.email {
   background-image: url("../images/paper-bg.png");
   text-decoration: none;
   font-size: 1.2em;
-  transition: 200ms all;
+  border-top: 0px solid #FF895A;
+  transition: 100ms all linear;
   height: 45px;
 }
 footer a.email:hover {
@@ -537,7 +539,7 @@ footer .copy p {
   -webkit-border-radius: 120px;
   border-radius: 120px;
   opacity: 0.7;
-  transition: all 200ms ease-in-out;
+  transition: all 200ms;
 }
 #intro .arrow:hover {
   background-position: center 16px;
@@ -693,7 +695,10 @@ footer .copy p {
   padding-bottom: 15px;
 }
 #work .project button {
-  border: 0;
+  border-top: 0px solid #F2EBC7;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
   background: #FF895A;
   color: #F2EBC7;
   margin-top: 20px;
@@ -701,7 +706,7 @@ footer .copy p {
   outline: none;
   width: 150px;
   height: 40px;
-  transition: 200ms all;
+  transition: 100ms all linear;
 }
 #work .project button:hover {
   border-top: 3px solid #F2EBC7;
@@ -764,12 +769,22 @@ footer .copy p {
   }
 }
 #design #gallery a img {
-  width: auto;
-  height: auto;
-  max-height: 100%;
-  max-width: 100%;
+  transition: all 100ms linear;
+  width: 101%;
+  height: 101%;
+  max-width: 101%;
+  max-height: 101%;
+}
+#design #gallery a:hover img {
+  transform: translateY(5px);
+  -webkit-transform: translateY(5px);
+  -moz-transform: translateY(5px);
+  -ms-transform: translateY(5px);
+  -o-transform: translateY(5px);
 }
 #design #gallery a {
+  background-color: #FF895A;
+  overflow: hidden;
   line-height: 0;
   border: 10px solid white;
   -moz-box-shadow: 0 0 3px #cccccc;
@@ -1424,24 +1439,40 @@ footer .copy p {
   max-height: 100%;
   max-width: 100%;
 }
-.overview section.pr-images a {
-  border-radius: 3px;
+.overview section.pr-images a.back {
   display: inline-block;
+  text-decoration: none;
   border: 0;
   margin-bottom: 50px;
+  margin-top: 10px;
+  padding-left: 50px;
+  padding-top: 13px;
   background: url("../images/arrow-prev.png") no-repeat;
   background-position: 2px 13px;
+  color: #b3b3b3;
   cursor: pointer;
   outline: none;
-  width: 50px;
   height: 50px;
   transition: 100ms all;
   opacity: 0.7;
 }
-.overview section.pr-images a:hover {
-  color: #cccccc;
+.overview section.pr-images a.back:hover {
+  color: #FF895A;
   background-position: 0px 13px;
   opacity: 0.9;
+}
+
+footer.footer-project {
+  height: auto;
+}
+footer.footer-project .scene {
+  padding-top: 60px;
+}
+footer.footer-project .tree {
+  display: none;
+}
+footer.footer-project .footer-wrap {
+  position: static;
 }
 
 /* Slider */
@@ -1769,21 +1800,12 @@ footer .copy p {
   width: 250px;
   height: 250px;
   margin: 0 auto;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
 }
 
 .lb-outerContainer:after {
   content: "";
   display: table;
   clear: both;
-}
-
-.lb-container {
-  padding: 4px;
 }
 
 .lb-loader {

@@ -86,7 +86,10 @@
 	}
 
 	.project button {
-		border: 0;
+		border-top: 0px solid $creamy;
+		border-left: none;
+		border-right: none;
+		border-bottom: none;
 		background: $pinky;
 		color: $creamy;
 		margin-top: 20px;
@@ -94,7 +97,7 @@
 		outline: none;
 		width: 150px;
 		height: 40px;
-		transition: 200ms all;
+		transition: 100ms all linear;
 		&:hover {
 			border-top: 3px solid $creamy;
 		}

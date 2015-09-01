@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
     minifyHTML = require('gulp-minify-html'),
+    autoprefixer = require('gulp-autoprefixer'),
     // browserify = require('gulp-browserify'),
     concat = require('gulp-concat');
 
@@ -63,6 +64,12 @@ gulp.task('watch', function() {
   gulp.watch('builds/development/*.html', ['html']);
 });
 
+gulp.task('autoprefixer', function () {
+    return gulp.src('sassSources')
+        .pipe(autoprefixer())
+        .pipe(gulp.dest(outputDir));
+});
+
 gulp.task('connect', function() {
   connect.server({
     root: outputDir,
@@ -83,4 +90,4 @@ gulp.task('move', function() {
   .pipe(gulpif(env === 'production', gulp.dest(outputDir+'images')))
 });
 
-gulp.task('default', ['watch', 'html', 'js', 'compass', 'move', 'connect']);
+gulp.task('default', ['watch', 'autoprefixer', 'html', 'js', 'compass', 'move', 'connect']);

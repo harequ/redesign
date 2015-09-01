@@ -40,13 +40,24 @@
 	}
 
 	#gallery a img {
-		width: auto;
-		height: auto;
-		max-height: 100%;
-		max-width: 100%;
+		transition: all 100ms linear;
+		width: 101%;
+		height: 101%;
+		max-width: 101%;
+		max-height: 101%;
+	}
+
+	#gallery a:hover img {
+		transform: translateY(5px);
+		-webkit-transform: translateY(5px);
+		-moz-transform: translateY(5px);
+		-ms-transform: translateY(5px);
+		-o-transform: translateY(5px);
 	}
 
 	#gallery a {
+		background-color: $pinky;
+		overflow: hidden;
 		line-height: 0;
 		border: 10px solid white;
 		@include box-shadow(0 0 3px lighten($grey, 40));

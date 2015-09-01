@@ -62,7 +62,8 @@ header #nav {
 
 				float: left;
 				height: 40px;
-				transition: all 200ms;
+				border-top: 0px solid $pinky;
+				transition: all 100ms linear;
 
 				@include breakpoint (max-width $small) {
 					float: none;

@@ -59,7 +59,8 @@ footer {
 		background-image: url("../images/paper-bg.png");
 		text-decoration: none;
 		font-size: 1.2em;
-		transition: 200ms all;
+		border-top: 0px solid $pinky;
+		transition: 100ms all linear;
 		height: 45px;
 
 		&:hover {
