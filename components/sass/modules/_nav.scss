@@ -2,7 +2,7 @@ header #nav {
 
 	@include clearfix;
 	z-index: 10;
-	background: $awesome;
+	background: darken($violetWarm, 20);
 	width: 100%;
 	opacity: 0.9;
 	overflow: hidden;
@@ -67,7 +67,7 @@ header #nav {
 
 				@include breakpoint (max-width $small) {
 					float: none;
-					border-top: 1px solid darken($awesome, 5);
+					border-top: 1px solid darken($violetWarm, 12);
 					padding: 0px;
 				}
 
@@ -98,7 +98,8 @@ header #nav {
 					}
 
 					&.active {
-						background: darken($awesome, 10);
+						// background: darken($violetWarm, 15);
+						color: $pinky;
 					}
 				} 
 
@@ -106,8 +107,8 @@ header #nav {
 					border-top: 3px solid $pinky;
 					
 					@include breakpoint (max-width $small) {
-						border-top: 1px solid darken($awesome, 5);
-						background-color: lighten($awesome, 3);
+						border-top: 1px solid darken($violetWarm, 5);
+						background-color: darken($violetWarm, 15);
 					}
 				}
 			} //li

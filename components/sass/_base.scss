@@ -102,7 +102,7 @@ p {
 }
 
 * {
-  @include selection(#49D3CC, $white);
+  @include selection($selection, $white);
 }
 
 .stuck {
