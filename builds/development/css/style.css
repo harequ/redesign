@@ -132,7 +132,7 @@ section h2 span:after {
   content: "";
   position: absolute;
   border-bottom: 2px solid #8c8c8c;
-  width: 1000%;
+  width: 100%;
   top: 50%;
 }
 @media (max-width: 370px) {

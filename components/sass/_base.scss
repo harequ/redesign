@@ -68,7 +68,7 @@ section h2 span:after {
 	content: "";
 	position: absolute;
 	border-bottom: 2px solid lighten($grey, 15);
-	width: 1000%;
+	width: 100%;
 	top: 50%;
 
 	@include breakpoint(max-width $narrow) {
