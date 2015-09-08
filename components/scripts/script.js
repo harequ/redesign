@@ -102,7 +102,7 @@ $(function() {
 	$('.carousel').slick({
 		dots: true,
 		autoplay: true,
-  		autoplaySpeed: 5000
+  		autoplaySpeed: 3000
 	});
 
 	/*

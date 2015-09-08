@@ -23,7 +23,7 @@
       this.fadeDuration                = 500;
       this.fitImagesInViewport         = true;
       // this.maxWidth                    = 800;
-      // this.maxHeight                   = 600;
+      // this.maxHeight                   = auto;
       this.positionFromTop             = 50;
       this.resizeDuration              = 500;
       this.showImageNumberLabel        = true;

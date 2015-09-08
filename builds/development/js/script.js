@@ -9881,7 +9881,7 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
       this.fadeDuration                = 500;
       this.fitImagesInViewport         = true;
       // this.maxWidth                    = 800;
-      // this.maxHeight                   = 600;
+      // this.maxHeight                   = auto;
       this.positionFromTop             = 50;
       this.resizeDuration              = 500;
       this.showImageNumberLabel        = true;
@@ -10402,7 +10402,7 @@ $(function() {
 	$('.carousel').slick({
 		dots: true,
 		autoplay: true,
-  		autoplaySpeed: 5000
+  		autoplaySpeed: 3000
 	});
 
 	/*
@@ -10534,7 +10534,7 @@ $(function() {
                 prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="previous">Previous</button>',
                 nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="next">Next</button>',
                 autoplay: false,
-                autoplaySpeed: 3000,
+                autoplaySpeed: 2000,
                 centerMode: false,
                 centerPadding: '50px',
                 cssEase: 'ease',
@@ -10562,7 +10562,7 @@ $(function() {
                 slidesPerRow: 1,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                speed: 500,
+                speed: 1000,
                 swipe: true,
                 swipeToSlide: false,
                 touchMove: true,
