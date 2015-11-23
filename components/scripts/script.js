@@ -4,11 +4,11 @@ $(function() {
 		fadeUntil = 400,
 		appearStart = 400,
 		hero = $('.hero'),
-		branches = $('.branches'),
 		snow = $('.snow'),
 		threeCircles = $('#intro dl'),
 		nav = $('#nav'),
 		pull = $('#pull'),
+		heightOfIntro = $('header').height(),
 		menu = $('#nav .navbar');
 
 	if(nav.length) {
@@ -25,13 +25,12 @@ $(function() {
 	// Scrolling events
 	$(window).scroll(function() {
 		var offset = $(this).scrollTop(),
-			heightOfIntro = $('header').height(),
+			
 	    	opacity = 0,
 	    	opacity2 = 1;
 
-	    // Parallax effect for branches and snow
+	    // Parallax effect for snow
 		if(offset <= heightOfIntro) {
-			branches.css({ 'transform' : 'translate(0px, '+ offset / 3.8 +'%)' });
 			snow.css({ 'transform' : 'translate(0px, ' + offset * 1.2 +'px)' });
 		}
 

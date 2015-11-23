@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Open+Sans:300italic,400,600italic,800|Courgette);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -73,10 +74,10 @@ main {
 }
 
 a {
-  color: gray;
+  color: #e6e6e6;
+  text-decoration: none;
 }
 a:hover {
-  text-decoration: none;
   color: #FF895A;
 }
 
@@ -91,9 +92,9 @@ h2 {
   font-family: Courgette, "Times New Roman", serif;
   font-size: 2.5em;
   line-height: 60px;
-  color: #8c8c8c;
-  border-top: 2px solid #8c8c8c;
-  border-bottom: 2px solid #8c8c8c;
+  color: #bfbfbf;
+  border-top: 2px solid #bfbfbf;
+  border-bottom: 2px solid #bfbfbf;
   display: inline-block;
   text-align: center;
 }
@@ -131,7 +132,7 @@ section h2 span:before,
 section h2 span:after {
   content: "";
   position: absolute;
-  border-bottom: 2px solid #8c8c8c;
+  border-bottom: 2px solid #bfbfbf;
   width: 100%;
   top: 50%;
 }
@@ -157,7 +158,7 @@ h3 {
   font-size: 1.8em;
   line-height: 36px;
   font-weight: 400;
-  color: #999999;
+  color: #FF895A;
 }
 
 p {
@@ -165,16 +166,16 @@ p {
   font-size: 0.9em;
   line-height: 24px;
   font-weight: 300;
-  color: #a6a6a6;
+  color: #bfbfbf;
 }
 
 *::-moz-selection {
   color: #f0f0f0;
-  background-color: #49D3CC;
+  background-color: #CBB8A7;
 }
 *::selection {
   color: #f0f0f0;
-  background-color: #49D3CC;
+  background-color: #CBB8A7;
 }
 
 .stuck {
@@ -415,7 +416,7 @@ footer .copy p {
 }
 
 #intro section {
-  background: url("../images/mainpage-bg.jpg") no-repeat center center fixed;
+  background: url("../images/1st-page-redesign.jpg") no-repeat center center fixed;
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -435,20 +436,25 @@ footer .copy p {
   overflow: hidden;
 }
 
-#intro .logo {
-  height: 109px;
-  width: 256px;
-  margin: 0 auto;
+#intro h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 30px;
+  font-family: 'Indie Flower', serif;
 }
-#intro .logo h1 {
-  background: url("../images/logo.png") no-repeat center 0;
-  opacity: 0.6;
-  height: 109px;
-  width: 256px;
-  margin: 0 auto -34px;
-  color: transparent;
-  text-shadow: none;
-  font: 0/0 a;
+
+.hero-text p {
+  max-width: 736px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-text p:after {
+  content: " ";
+  display: block;
+  clear: both;
 }
 
 #intro .hero {
@@ -460,9 +466,7 @@ footer .copy p {
 
 #intro .hero-text {
   font-size: 1em;
-  padding-top: 20px;
-  padding-bottom: 100px;
-  text-shadow: #644D52 0 0 40px;
+  padding: 20px 0;
 }
 @media (max-width: 700px) {
   #intro .hero-text {
@@ -475,49 +479,17 @@ footer .copy p {
 #intro .hero-text p {
   line-height: 1.5;
   font-family: "Courgette", "Times New Roman", serif;
-  font-size: 1.1em;
+  font-size: 1em;
   color: #f0f0f0;
   text-align: center;
-  padding: 0 1em;
-}
-#intro .hero-text p:first-child, #intro .hero-text p:last-child {
-  padding: .5em 0;
-}
-
-#intro .snowy-log {
-  width: 200px;
-  height: 175px;
-  background: url("../images/snowy-log.png") no-repeat;
-  position: absolute;
-  left: 0;
-  bottom: 150px;
-}
-@media (max-width: 1200px) {
-  #intro .snowy-log {
-    display: none;
-  }
-}
-
-#intro .branches {
-  width: 480px;
-  height: 409px;
-  background: url("../images/branches.png") no-repeat;
-  position: absolute;
-  right: 0;
-  bottom: 150px;
-}
-@media (max-width: 1200px) {
-  #intro .branches {
-    display: none;
-  }
+  padding: 0.3em 1em;
 }
 
 #intro .snow {
-  background: url("../images/snow.png") no-repeat;
-  height: 100vh;
+  background: url("../images/snow-2.png");
+  height: 130%;
   width: 100%;
-  top: -130px;
-  background-size: cover;
+  top: -200px;
   position: absolute;
   z-index: 3;
 }
@@ -557,7 +529,7 @@ footer .copy p {
   width: 510px;
   color: white;
 }
-@media (max-width: 1200px) {
+@media (max-width: 960px) {
   #intro dl {
     display: none;
   }
@@ -593,24 +565,11 @@ footer .copy p {
 }
 
 #work {
-  background: url("../images/paper-bg.png");
+  background: url("../images/triangular-bg.png") #644D52;
 }
 #work .project-wrap {
   width: 100%;
-  -webkit-transition: all 200ms;
-          transition: all 200ms;
-  border-top: 1px dashed #c3bcb0;
-}
-#work .project-wrap:hover {
-  background: url("../images/triangular-bg.png") #644D52;
-  border-top: 1px solid #c3bcb0;
-}
-#work .project-wrap:hover h3 {
-  color: #f0f0f0;
-}
-#work .project-wrap:hover p {
-  color: #f0f0f0;
-  font-weight: 300;
+  border-top: 1px dashed #7b5f65;
 }
 #work .project-wrap:first-child {
   border-top: none;
@@ -642,14 +601,11 @@ footer .copy p {
   }
 }
 #work .project img {
-  width: 57.62712%;
+  width: 49.15254%;
   float: left;
   margin-right: 1.69492%;
-  border-radius: 15px;
-  border: 1px solid #e6e6e6;
+  border-radius: 5px;
   padding-top: 30px;
-  padding-left: 0;
-  padding-right: 0;
   background: #ebebeb;
   background-image: url("../images/browser-circles.png");
   background-repeat: no-repeat;
@@ -671,7 +627,8 @@ footer .copy p {
   }
 }
 #work .project div {
-  width: 40.67797%;
+  padding-top: 40px;
+  width: 49.15254%;
   float: right;
   margin-right: 0;
   padding-left: 30px;
@@ -685,6 +642,7 @@ footer .copy p {
     margin-left: 0;
     margin-right: 0;
     padding-left: 0%;
+    padding-top: 0;
     text-align: center;
     margin-top: 20px;
   }
@@ -729,6 +687,7 @@ footer .copy p {
   text-align: center;
   margin-bottom: 25px;
   position: relative;
+  color: #999999;
 }
 @media (max-width: 370px) {
   #design h3 {
@@ -752,6 +711,16 @@ footer .copy p {
   margin-top: 30px;
 }
 #design #illustrations:after, #design #logos:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+#design #illustrations {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#design #illustrations:after {
   content: " ";
   display: block;
   clear: both;
@@ -1052,7 +1021,7 @@ footer .copy p {
     width: 0%;
   }
   100% {
-    width: 60%;
+    width: 70%;
   }
 }
 @-webkit-keyframes wordpress {
@@ -1100,7 +1069,7 @@ footer .copy p {
     width: 0%;
   }
   100% {
-    width: 60%;
+    width: 70%;
   }
 }
 @keyframes wordpress {

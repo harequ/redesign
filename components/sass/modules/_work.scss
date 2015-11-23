@@ -1,22 +1,9 @@
 #work {
-	background: url("../images/paper-bg.png");
+	background: url('../images/triangular-bg.png') $violetWarm;
 
 	.project-wrap {
 		width: 100%;
-		transition: all 200ms;
-		border-top: 1px dashed lighten($awesome, 14);
-
-    	&:hover {
-			background: url('../images/triangular-bg.png') $violetWarm ;
-			border-top: 1px solid lighten($awesome, 14);
-			h3 {
-				color: $white;
-			}
-			p {
-				color: $white;
-				font-weight: 300;
-			}
-    	}
+		border-top: 1px dashed lighten($violetWarm, 8);
     	&:first-child {
     		border-top: none;
     	}
@@ -44,12 +31,9 @@
 	}
 
 	.project img {
-		@include span(7);
-		@include border-radius(15px);
-		border: 1px solid lighten($grey, 50);
+		@include span(6);
+		@include border-radius(5px);
 		padding-top: 30px;
-		padding-left: 0;
-		padding-right: 0;
 		background: lighten($grey, 52);
 		background-image: url('../images/browser-circles.png');
 		background-repeat: no-repeat;
@@ -67,13 +51,15 @@
 	}
 
 	.project div {
-		@include span(5 last);
+		padding-top: 40px;
+		@include span(6 last);
 		@include prefix(30px);
 
 		@include breakpoint(0 749px) {
 			@include break;
 			@include full;
 			@include prefix(0);
+			padding-top: 0;
 			text-align: center;
 			margin-top: 20px;
 		}
@@ -82,7 +68,6 @@
 	.project h3 {
 		line-height: 1;
 		padding-bottom: 15px;
-
 	}
 
 	.project button {

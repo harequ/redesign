@@ -1,30 +1,44 @@
 #intro section {
-	@include backImage("../images/mainpage-bg.jpg");
+	@include backImage("../images/1st-page-redesign.jpg");
 	position: relative;
 	z-index: 1;
 	height: 100vh;
 	@include display-flex();
-    @include align-items(center);
-    @include justify-content(center);
-    overflow: hidden;
+   @include align-items(center);
+   @include justify-content(center);
+   overflow: hidden;
 }
 
-#intro .logo {
-	height: 109px;
-	width: 256px;
-	margin: 0 auto;
-
-	h1 {
-		background: url("../images/logo.png") no-repeat center 0;
-		opacity: 0.6;
-		height: 109px;
-		width: 256px;
-		margin: 0 auto -34px;
-		color: transparent;
-		text-shadow: none;
-		font: 0/0 a;
-	}
+#intro h1 {
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+	font-size: 3rem;
+	line-height: 1;
+	margin-bottom: 30px;
+	font-family: 'Indie Flower', serif;
 }
+
+.hero-text p {
+	@include container(736px);
+}
+
+// // #intro .logo {
+// // 	height: 109px;
+// // 	width: 256px;
+// // 	margin: 0 auto;
+
+// // 	h1 {
+// // 		background: url("../images/logo.png") no-repeat center 0;
+// // 		opacity: 0.6;
+// // 		height: 109px;
+// // 		width: 256px;
+// // 		margin: 0 auto -34px;
+// // 		color: transparent;
+// // 		text-shadow: none;
+// // 		font: 0/0 a;
+// // 	}
+// // }
 
 #intro .hero {
 	padding: 100px 0;
@@ -35,9 +49,8 @@
 
 #intro .hero-text {
 	font-size: 1em;
-	padding-top: 20px;
-	padding-bottom: 100px;
-	@include text-shadow($violetWarm 0 0 40px);
+	padding: 20px 0;
+
 	@include breakpoint (max-width $small) {
 		padding-bottom: 38px;
 		font-size: 0.9em;
@@ -47,46 +60,22 @@
 
 #intro .hero-text p {
 	line-height: 1.5;
+	// font: 300 italic 0.9em/20px "Open Sans", "Times New Roman", serif;
+	// font-family: "Open Sans", "Times New Roman", serif;
 	font-family: "Courgette", "Times New Roman", serif;
-	font-size: 1.1em;
+	// font-family: 'Indie Flower', serif;
+	font-size: 1em;
 	color: $white;
 	text-align: center;
-	padding: 0 1em;
-	&:first-child, &:last-child {
-		padding: .5em 0;
-	}
-}
-
-#intro .snowy-log {
-	width: 200px;
-	height: 175px;
-	background: url("../images/snowy-log.png") no-repeat;
-	position: absolute;
-	left: 0;
-	bottom: 150px;
-	@include breakpoint(max-width $wide) {
-		display: none;
-	}
-}
-
-#intro .branches {
-	width: 480px;
-	height: 409px;
-	background: url("../images/branches.png") no-repeat;
-	position: absolute;
-	right: 0;
-	bottom: 150px;
-	@include breakpoint(max-width $wide) {
-		display: none;
-	}
+	padding: 0.3em 1em;
 }
 
 #intro .snow {
-	background: url("../images/snow.png") no-repeat;
-	height: 100vh;
+	background: url("../images/snow-2.png");
+	height: 130%;
 	width: 100%;
-	top: -130px;
-	background-size: cover;
+	top: -200px;
+	// background-size: cover;
 	position: absolute;
 	z-index: 3;
 	@include breakpoint(max-width $small) {
@@ -123,7 +112,7 @@
 	margin-left: -255px;	
 	width: 510px;
 	color: lighten($milky, 50);
-	@include breakpoint (max-width $wide) {
+	@include breakpoint (max-width $medium) {
 		display: none;
 	}
 }
