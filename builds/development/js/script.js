@@ -10450,14 +10450,12 @@ $(function() {
 			javascript.addClass('javascript');
 			php.addClass('php');
 			wordpress.addClass('wordpress');
-			mysql.addClass('mysql');
 		} else {
 			html.removeClass('html');
 			css.removeClass('css');
 			javascript.removeClass('javascript');
 			php.removeClass('php');
 			wordpress.removeClass('wordpress');
-			mysql.removeClass('mysql');
 		}
 	}, {offset : '95%'});
 
@@ -10487,14 +10485,6 @@ $(function() {
 	=============================================
 	*/
 	var circle = $('#intro .circle');
-	function animateCircle() {
-	    circle.animate({
-	        width: circle.css('width') == '30px' ? '20px' : '30px',
-	        height: circle.css('height') == '30px' ? '20px' : '30px',
-	    }, 300, animateCircle);
-	}
-	// animateCircle();
-	
 	$('#intro h1').hover(function() {
 		circle.toggleClass('open');
 	});

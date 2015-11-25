@@ -13,10 +13,27 @@
 			border-left: 3px solid $pinky;
 			padding-left: 15px;
 		}
+
+		@include breakpoint(0 750px) {
+			transition-property: none;
+			&:hover {
+				transition-property: none;
+				border-left: none;
+				padding-left: 0;
+			}
+		}
 	}
 
 	h3 a {
 		color: lighten($grey, 50);
+		text-decoration: none;
+		border-bottom: none;
+
+		@include breakpoint(0 750px) {
+			&:hover {
+				color: $pinky;
+			}
+		}
 	}
 
 	.project-wrap {
@@ -69,11 +86,11 @@
 	}
 
 	.project div {
-		padding-top: 40px;
+		padding-top: 25px;
 		@include span(6 last);
 		@include prefix(30px);
 
-		@include breakpoint(0 749px) {
+		@include breakpoint(0 750px) {
 			@include break;
 			@include full;
 			@include prefix(0);
@@ -87,9 +104,21 @@
 		}
 
 		.role {
-			font-size: .8em;
-			color: $creamy;
-			padding-top: 3px;
+			@include clearfix;
+			margin-top: 5px;
+		}
+		.role li {
+			margin-right: 3px;
+			font-size: .7em;
+			display: inline-block;
+			float: left;
+			padding: 0 3px;
+			color: lighten($pinky, 10);
+			background: darken($violetWarm, 2);
+
+			@include breakpoint(0 750px) {
+				float: none;
+			}
 		}
 	}
 

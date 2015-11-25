@@ -11,14 +11,12 @@ main {
 }
 
 a {
-	color: lighten($grey, 20);
+	color: $pinky;
 	text-decoration: none;
 	transition: all 100ms linear;
-	// border-bottom: 1px solid lighten($grey, 20);
 
 	&:hover {
-		color: $pinky;
-		border-bottom: none;
+		color: lighten($pinky, 10);
 	}
 }
 
