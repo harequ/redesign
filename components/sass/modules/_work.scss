@@ -1,9 +1,27 @@
 #work {
 	background: url('../images/triangular-bg.png') $violetWarm;
 
+	h3 {
+		line-height: 1;
+		text-decoration: none;
+		transition: border-left 100ms linear 0ms,
+						padding-left 100ms linear 0ms;
+
+		&:hover {
+			transition: border-left 100ms linear 0ms,
+							padding-left 100ms ease-out 100ms;
+			border-left: 3px solid $pinky;
+			padding-left: 15px;
+		}
+	}
+
+	h3 a {
+		color: lighten($grey, 50);
+	}
+
 	.project-wrap {
 		width: 100%;
-		border-top: 1px dashed lighten($violetWarm, 8);
+		border-top: 1px dashed lighten($violetWarm, 6);
     	&:first-child {
     		border-top: none;
     	}
@@ -63,33 +81,16 @@
 			text-align: center;
 			margin-top: 20px;
 		}
-	}
-
-	.project h3 {
-		line-height: 1;
-		padding-bottom: 15px;
-	}
-
-	.project button {
-		border-top: 0px solid $creamy;
-		border-left: none;
-		border-right: none;
-		border-bottom: none;
-		background: $pinky;
-		color: $creamy;
-		margin-top: 20px;
-		cursor: pointer;
-		outline: none;
-		width: 150px;
-		height: 40px;
-		transition: 100ms all linear;
-		&:hover {
-			border-top: 3px solid $creamy;
+		p {
+			padding-top: 12px;
+			color: lighten($grey, 30);
 		}
 
-		@include breakpoint(0 749px) {
-			width: 50%;
-			padding: 10px 20px;
+		.role {
+			font-size: .8em;
+			color: $creamy;
+			padding-top: 3px;
 		}
 	}
+
 } // #work
